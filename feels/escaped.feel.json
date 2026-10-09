@@ -1,0 +1,19 @@
+{
+  "feel": 1,
+  "name": "escaped",
+  "kind": "shot",
+  "meta": { "source": "reaper:feels.RPP#escaped", "editor": "rppconv 1" },
+  "voices": [
+    { "id": "v1", "type": "synth",
+      "wave": "Sine", "f0_hz": 40, "f1_hz": 120, "sweep": "exp", "sweep_ms": 0,
+      "delay_ms": 0, "attack_ms": 50, "attack_curve": 1, "hold_ms": 100,
+      "decay_ms": 0, "decay_curve": 1, "sustain": 0, "sustain_ms": 0,
+      "release_ms": 300, "release_curve": 1,
+      "level": 0.6, "left": 1, "right": 1,
+      "trem_hz": 0, "trem_depth": 0, "gate_hz": 0, "gate_duty": 0,
+      "band_hz": 80, "grain_rate": 70, "grain_cycles": 2, "grain_jitter": 30, "grain_spread": 20,
+      "seed": 23 }
+  ],
+  "mix": { "duck": { "bus": "turn", "ms": 350 } },
+  "rumble": { "pattern": "once" }
+}

@@ -1,0 +1,93 @@
+// Elite's ambience: continuous feels that
+// follow the ship's state, as layer rules in stages. main.lua runs the
+// stages in order, ship_ambience, planet and damage only while
+// the ship's systems live; their layers say so too, since a stage Lua does
+// not call runs after on_tick. The layers that bend their voices (the ground
+// rush, low shields, a weak hull) and the heat feel are Lua for now
+// (lua/ambience.lua, lua/heat.lua), each run next to its stage.
+{
+  "format": 1,
+  "stages": {
+    "ship_ambience": { "order": 10 },
+    "planet":        { "order": 30 },
+    "thargoid":      { "order": 40 },
+    "damage":        { "order": 50 }
+  },
+  "layers": {
+    // shipAmbience: the drive charging, the hyperspace tunnel, fuel
+    // scooping, overheating and interdiction, in the ship and not parked
+
+    // with the calm jump feel, a soft pulse every second while the drive
+    // charges
+    "fsd_charge": {
+      "stage": "ship_ambience", "order": 10, "feel": "fsd_charge", "rumble": "fsd_charge",
+      "if": "lib.in_ship(st) and not lib.parked(st) and lib.fsd_charging(t) and settings.jump_feel == 'calm' and not lib.systems_dead(t)",
+      "level": "0.5 - 0.5 * gomath.cos(6.283185307179586 * lib.secs(lib.since(t.now, state.fsd_charge_start)))"
+    },
+    // into the tunnel: one soft swell, then quiet for the rest of the jump
+    "hyperspace": {
+      "stage": "ship_ambience", "order": 20, "feel": "hyperspace", "rumble": "hyperspace",
+      "if": "lib.in_ship(st) and not lib.parked(st) and lib.in_tunnel(t) and settings.jump_feel ~= 'off' and lib.hyperspace_swell(lib.secs(lib.tunnel_ns(t))) > 0 and not lib.systems_dead(t)",
+      "level": "lib.hyperspace_swell(lib.secs(lib.tunnel_ns(t)))"
+    },
+    "fuel_scoop": {
+      "stage": "ship_ambience", "order": 30, "feel": "fuel_scoop", "rumble": "fuel_scoop",
+      "if": "lib.in_ship(st) and not lib.parked(st) and st.flags.ScoopingFuel and not lib.systems_dead(t)",
+      "level": "0.8 + 0.2 * gomath.sin(18.84955592153876 * kit.seconds(t.unix_ms))"
+    },
+    // boiling: irregular bubbles over a hot hiss
+    "overheat": {
+      "stage": "ship_ambience", "order": 40, "feel": "overheat",
+      "if": "t.native and lib.in_ship(st) and not lib.parked(st) and st.flags.Overheating and not lib.systems_dead(t)",
+      "level": "0.55 + 0.45 * gomath.sin(14.451326206513048 * kit.seconds(t.unix_ms)) * gomath.sin(5.654866776461628 * kit.seconds(t.unix_ms) + 1)"
+    },
+    // on the motors: on for a quarter second, off for a quarter second
+    "overheat_rumble": {
+      "stage": "ship_ambience", "order": 41, "key": "overheat", "rumble": "overheat",
+      "if": "not t.native and lib.in_ship(st) and not lib.parked(st) and st.flags.Overheating and gomath.mod(kit.seconds(t.unix_ms), 0.5) < 0.25 and not lib.systems_dead(t)"
+    },
+    "interdiction": {
+      "stage": "ship_ambience", "order": 50, "feel": "interdiction", "rumble": "interdiction",
+      "if": "lib.in_ship(st) and not lib.parked(st) and st.flags.BeingInterdicted and not lib.systems_dead(t)",
+      "level": "0.6 + 0.4 * gomath.sin(9.42477796076938 * kit.seconds(t.unix_ms))"
+    },
+    "interdiction_noise": {
+      "stage": "ship_ambience", "order": 60, "feel": "interdiction_noise",
+      "if": "lib.in_ship(st) and not lib.parked(st) and st.flags.BeingInterdicted and not lib.systems_dead(t)"
+    },
+
+    // planetAmbience: the atmospheric glide (the ground rush follows in
+    // lua/ambience.lua)
+    "glide": {
+      "stage": "planet", "order": 10, "feel": "glide", "level": 0.8,
+      "if": "lib.in_ship(st) and st.flags2.GlideMode and not lib.systems_dead(t)"
+    },
+    "glide_low": {
+      "stage": "planet", "order": 20, "feel": "glide_low",
+      "if": "lib.in_ship(st) and st.flags2.GlideMode and not lib.systems_dead(t)"
+    },
+
+    // thargoidAmbience: with Thargoid music, a slow throb of two beats
+    // drifting against each other, harder in combat
+    "thargoid": {
+      "stage": "thargoid", "order": 10, "level": 0.6,
+      "feel": { "expr": "state.music == 'Combat_Unknown' and 'thargoid_combat' or 'thargoid'",
+                "one_of": ["thargoid", "thargoid_combat"] },
+      "if": "(lib.in_ship(st) or lib.in_srv(st)) and lib.thargoid_music()"
+    },
+    "thargoid_pulse": {
+      "stage": "thargoid", "order": 20, "level": 0.6,
+      "feel": { "expr": "state.music == 'Combat_Unknown' and 'thargoid_pulse_combat' or 'thargoid_pulse'",
+                "one_of": ["thargoid_pulse", "thargoid_pulse_combat"] },
+      "if": "(lib.in_ship(st) or lib.in_srv(st)) and lib.thargoid_music()"
+    },
+
+    // damageAmbience's last layer (low shields and a weak hull come first,
+    // in lua/ambience.lua): the hull rattling with the shields down, out of
+    // supercruise and hyperspace
+    "shields_offline": {
+      "stage": "damage", "order": 10, "feel": "shields_offline", "level": 0.45,
+      "if": "lib.in_ship(st) and not lib.parked(st) and not (st.flags.Supercruise or st.flags.FSDJump) and state.shields_seen and not st.flags.ShieldsUp and not lib.systems_dead(t)"
+    }
+  }
+}

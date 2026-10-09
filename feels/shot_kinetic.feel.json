@@ -1,0 +1,28 @@
+{
+  "feel": 1,
+  "name": "shot_kinetic",
+  "kind": "shot",
+  "meta": { "source": "reaper:feels.RPP#shot_kinetic", "editor": "rppconv 1" },
+  "voices": [
+    { "id": "v1", "type": "synth",
+      "wave": "Square", "f0_hz": 80, "f1_hz": 0, "sweep": "exp", "sweep_ms": 0,
+      "delay_ms": 0, "attack_ms": 1, "attack_curve": 1, "hold_ms": 20,
+      "decay_ms": 0, "decay_curve": 1, "sustain": 0, "sustain_ms": 0,
+      "release_ms": 60, "release_curve": 1,
+      "level": 0.9, "left": 1, "right": 1,
+      "trem_hz": 0, "trem_depth": 0, "gate_hz": 0, "gate_duty": 0,
+      "band_hz": 80, "grain_rate": 70, "grain_cycles": 2, "grain_jitter": 30, "grain_spread": 20,
+      "seed": 96 },
+    { "id": "v2", "type": "synth",
+      "wave": "Noise", "f0_hz": 1200, "f1_hz": 0, "sweep": "exp", "sweep_ms": 0,
+      "delay_ms": 0, "attack_ms": 1, "attack_curve": 1, "hold_ms": 10,
+      "decay_ms": 0, "decay_curve": 1, "sustain": 0, "sustain_ms": 0,
+      "release_ms": 40, "release_curve": 1,
+      "level": 0.4, "left": 1, "right": 1,
+      "trem_hz": 0, "trem_depth": 0, "gate_hz": 0, "gate_duty": 0,
+      "band_hz": 80, "grain_rate": 70, "grain_cycles": 2, "grain_jitter": 30, "grain_spread": 20,
+      "seed": 97 }
+  ],
+  "mix": { "duck": { "bus": "turn", "ms": 350 } },
+  "rumble": { "pattern": "once" }
+}

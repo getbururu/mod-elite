@@ -1,0 +1,56 @@
+// Elite's sensors: the journal, Status.json, the control
+// bindings and the HUD reader. The game process and window come from the
+// manifest; the pad and the keyboard are always there.
+{
+  "sensors": 1,
+  "items": {
+    "journal": { "type": "file.jsonl", "order": 10,
+                 "dir": "{path:journal}", "glob": "Journal.*.log",
+                 "pick": "newest_mtime", "rescan_ms": 2000,
+                 "name_field": "event", "catch_up": "state_only", "poll_ms": 0,
+                 "patchable": ["dir", "rescan_ms"],
+                 "redact": { "*":                 ["Commander", "FID", "PilotName", "KillerName", "Killers.Name"],
+                             "Commander":         ["Name"],
+                             "LoadGame":          ["ShipName", "Group"],
+                             "ReceiveText":       ["From", "Message"],
+                             "SendText":          ["To", "Message"],
+                             "Friends":           ["Name"],
+                             "WingJoin":          ["Others"],
+                             "WingAddMember":     ["Name"], "WingLeave": [],
+                             "CrewMemberJoins":   ["Crew"], "CrewMemberQuits": ["Crew"],
+                             "CrewLaunchFighter": ["Crew"], "JoinACrew": ["Captain"], "QuitACrew": ["Captain"] } },
+
+    "status": { "type": "file.json", "order": 20,
+                "path": "{path:journal}/Status.json", "poll_ms": 0, "first_change": "silent",
+                "patchable": ["path"],
+                "fields": {
+                  "Flags":  { "type": "bits", "bits": {
+                    "Docked": 0, "Landed": 1, "LandingGearDown": 2, "ShieldsUp": 3, "Supercruise": 4,
+                    "FlightAssistOff": 5, "HardpointsDeployed": 6, "CargoScoopDeployed": 9,
+                    "SilentRunning": 10, "ScoopingFuel": 11, "SRVTurretView": 13, "MassLocked": 16,
+                    "FSDCharging": 17, "FSDCooldown": 18, "LowFuel": 19, "Overheating": 20,
+                    "HasLatLong": 21, "InDanger": 22, "BeingInterdicted": 23, "InMainShip": 24,
+                    "InFighter": 25, "InSRV": 26, "AnalysisMode": 27, "AltitudeFromAverageRadius": 29,
+                    "FSDJump": 30 } },
+                  "Flags2": { "type": "bits", "bits": {
+                    "OnFoot": 0, "OnFootInStation": 3, "OnFootOnPlanet": 4, "LowOxygen": 6,
+                    "GlideMode": 12, "OnFootInHangar": 13, "OnFootSocialSpace": 14 } },
+                  "Pips": { "type": "int[]" }, "FireGroup": { "type": "int" }, "GuiFocus": { "type": "int" },
+                  "Health": { "type": "number?" }, "Altitude": { "type": "number?" },
+                  "SelectedWeapon": { "type": "string" } } },
+
+    "binds": { "type": "bindings", "order": 10, "layout": "bindings/binds.json",
+               "dir": "{path:bindings}",
+               "pointer": { "files": ["StartPreset.4.start", "StartPreset.start"], "line": 2, "fallback_line": 1 },
+               "file": "{preset}.{major}.{minor}.binds", "fallback_file": "{preset}.binds",
+               "poll_ms": 5000, "when": "game.running",
+               "patchable": ["dir"] },
+
+    "hud": { "type": "screen", "window": "elite-dangerous", "layout": "screen/hud.json",
+             "tick_ms": 100,
+             "settings": { "enabled": "hud_reader", "debug": "hud_debug", "colors": "hud_colors" },
+             "debug_dir": "{ModData}/hud_debug",
+             "palette": { "matrix_file": "{path:options}/Graphics/GraphicsConfigurationOverride.xml",
+                          "learned_file": "{ModData}/hud_palette.json" } }
+  }
+}

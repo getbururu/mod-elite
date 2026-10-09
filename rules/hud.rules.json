@@ -1,0 +1,37 @@
+// HUD events and their feels:
+// what the HUD reader saw since its last reading, in a ship and out of
+// the station. Strength scales the feel; a reload plays on its side.
+{
+  "format": 1,
+  "defaults": { "if": "lib.in_ship(st) and not st.flags.Docked" },
+  "rules": {
+    // one feel for every weapon: as long and as strong as the shield it
+    // took, on the side the hologram flashed (a hit seen only as a flash,
+    // before the shield % reads, is felt as 3%)
+    "shield_hit":   { "order": 10, "on": "hud:shield_hit", "if": "st.flags.ShieldsUp",
+                      "play": { "feel": "shield_hit", "pan": "ev.pan", "scale": "ev.strength",
+                                "amount": "ev.damage == 0 and 3 or ev.damage" } },
+    "shield_regen": { "order": 20, "on": "hud:shield_regen", "play": "shield_regen" },
+    "heat_notch":   { "order": 30, "on": "hud:heat_notch", "play": { "feel": "heat_notch", "scale": "ev.strength" } },
+    "hull_hit_hud": { "order": 40, "on": "hud:hull_hit", "play": { "feel": "hull_hit_hud", "scale": "ev.strength" } },
+
+    // a hit on the target: only while firing, on the side of the trigger
+    // fired with (R2 first, then L2)
+    "target_hit_r":      { "order": 50, "on": "hud:target_hit", "if": "lib.firing('r2', 400, t)",
+                           "play": { "feel": "target_hit", "side": "right", "scale": "ev.strength" } },
+    "target_hit_l":      { "order": 51, "on": "hud:target_hit", "if": "lib.firing('l2', 400, t)",
+                           "play": { "feel": "target_hit", "side": "left", "scale": "ev.strength" } },
+    "target_hull_hit_r": { "order": 52, "on": "hud:target_hull_hit", "if": "lib.firing('r2', 400, t)",
+                           "play": { "feel": "target_hull_hit", "side": "right", "scale": "ev.strength" } },
+    "target_hull_hit_l": { "order": 53, "on": "hud:target_hull_hit", "if": "lib.firing('l2', 400, t)",
+                           "play": { "feel": "target_hull_hit", "side": "left", "scale": "ev.strength" } },
+
+    "reload":       { "order": 80, "on": "hud:reload_start", "play": { "feel": "reload", "side": { "expr": "ev.side" } } },
+    "reload_done":  { "order": 81, "on": "hud:reload_done", "play": { "feel": "reload_done", "side": { "expr": "ev.side" } } },
+
+    // the target's shield broke while firing with either trigger
+    "target_shield_break": { "order": 90, "on": "hud:target_shield_break",
+                             "if": "lib.firing('r2', 2000, t) or lib.firing('l2', 2000, t)",
+                             "play": "target_shield_break" }
+  }
+}

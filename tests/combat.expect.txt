@@ -1,0 +1,1976 @@
+replay through elite; elite drives; ticks of 25 ms
+@ 0.000
+  log Elite Dangerous started
+  read ask hud entries [{class:"multicannon",counter:true,counter_text:"90/2100",icon:true,name:"MULTI-CANNON",size:3},{class:"multicannon",counter:true,counter_text:"90/2100",icon:true,name:"MULTI-CANNON",size:3},{class:"beam",counter:false,icon:true,name:"BEAM LASER",size:2}]  origin=lua:elite/lua/hud.lua:102
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  facts running=true active=true menu=false context="normal space"
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=0 list_out=false lists=false  origin=lua:elite/lua/hud.lua:61
+  screen ask hud fast=false  origin=lua:elite/lua/hud.lua:90
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out L2 OFF [] R2 OFF [] light 0 255 60 @200 leds 1 mic off
+  shown light=hull_full l2=- r2=-
+@ 0.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=0 list_out=false lists=false  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  (same for 18 more ticks)
+# Hardpoints out
+@ 0.500
+  read play hardpoints side=both scale=1 pan=0 amount=0 at=+0  origin=rule:elite/hardpoints
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  facts running=true active=true menu=false context="normal space, weapons out"
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6]
+  shown light=hull_full l2=ship_weapons_l r2=ship_weapons_r
+  synth on on
+@ 0.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  (same for 11 more ticks)
+@ 0.825
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  synth off off
+@ 0.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  (same for 25 more ticks)
+audio f9e81d51
+# Firing: R2 and L2 held
+@ 1.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:1,level:0.0038333333333333336  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 1.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:2,level:0.007666666666666667  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.550
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:3,level:0.011500000000000002  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.575
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:4,level:0.015333333333333334  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:5,level:0.019166666666666665  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:5.999999999999999,level:0.023  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.650
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:6.999999999999999,level:0.02683333333333333  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.675
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:8,level:0.03066666666666667  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.700
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:9,level:0.0345  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.725
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:10,level:0.03833333333333333  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:11,level:0.042166666666666665  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:11.999999999999998,level:0.046  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.800
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:12.999999999999998,level:0.049833333333333334  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.825
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:13.999999999999998,level:0.05366666666666666  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:14.999999999999998,level:0.057499999999999996  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.875
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:16,level:0.06133333333333334  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.900
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:17,level:0.06516666666666666  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.925
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:18,level:0.069  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.950
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:19,level:0.07283333333333333  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 1.975
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:20,level:0.07666666666666666  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.000
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:21,level:0.0805  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:22,level:0.08433333333333333  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.050
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:23,level:0.08816666666666666  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.075
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:23.999999999999996,level:0.092  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.100
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:24.999999999999996,level:0.09583333333333333  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.125
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:25.999999999999996,level:0.09966666666666667  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.150
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:26.999999999999996,level:0.1035  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.175
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:27.999999999999996,level:0.10733333333333332  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:28.999999999999996,level:0.11116666666666666  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:29.999999999999996,level:0.11499999999999999  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:30.999999999999996,level:0.11883333333333332  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:32,level:0.12266666666666667  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.300
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:33,level:0.12650000000000003  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.325
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:34.00000000000001,level:0.13033333333333336  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.350
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:35.00000000000001,level:0.1341666666666667  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.375
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:36.000000000000014,level:0.13800000000000004  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.400
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:37.000000000000014,level:0.1418333333333334  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.425
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:38.00000000000002,level:0.14566666666666675  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.450
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:39.00000000000002,level:0.14950000000000008  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.475
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:40.00000000000002,level:0.15333333333333343  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:41.00000000000003,level:0.1571666666666668  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:42.00000000000003,level:0.16100000000000012  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.550
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:43.000000000000036,level:0.16483333333333347  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.575
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:44.000000000000036,level:0.16866666666666683  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:45.00000000000004,level:0.17250000000000015  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:46.00000000000004,level:0.1763333333333335  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.650
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:47.00000000000004,level:0.18016666666666686  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.675
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:48.00000000000005,level:0.1840000000000002  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.700
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:49.00000000000005,level:0.18783333333333355  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.725
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:50.00000000000006,level:0.1916666666666669  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:51.00000000000006,level:0.19550000000000023  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:52.000000000000064,level:0.19933333333333358  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.800
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:53.000000000000064,level:0.2031666666666669  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.825
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:54.00000000000007,level:0.20700000000000027  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:55.00000000000007,level:0.21083333333333362  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.875
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:56.00000000000007,level:0.21466666666666695  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.900
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:57.00000000000008,level:0.2185000000000003  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.925
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:58.00000000000008,level:0.22233333333333366  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.950
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary_spin feel=spin_up level=1 side=right gain=spin_up add=f0_hz:59.000000000000085,level:0.226166666666667  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 2.975
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  (same for 4 more ticks)
+@ 3.100
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.125
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.150
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.175
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  (same for 1 more tick)
+@ 3.300
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.325
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.350
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.375
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.400
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.425
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.450
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.475
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  (same for 1 more tick)
+@ 3.575
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.650
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.675
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.700
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.725
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.800
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  (same for 1 more tick)
+@ 3.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.875
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 3.900
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.925
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 3.950
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 3.975
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 4.000
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 4.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 4.050
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 4.075
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 4.100
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 4.125
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 4.150
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 4.175
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 4.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 4.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 4.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  (same for 1 more tick)
+@ 4.300
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 4.325
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 4.350
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 4.375
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 4.400
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 4.425
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on on
+@ 4.450
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+@ 4.475
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer fire_primary feel=weapon_multicannon level=1 side=right gain=fire_primary  origin=lua:elite/lua/weapons.lua:147
+  drive layer fire_secondary feel=weapon_beam level=1 side=left gain=fire_secondary  origin=lua:elite/lua/weapons.lua:147
+  synth on off
+@ 4.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:true,r2:true} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  synth on on
+@ 4.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  (same for 1 more tick)
+@ 4.575
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  synth on off
+@ 4.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+@ 4.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  synth off off
+@ 4.650
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  (same for 13 more ticks)
+audio 1f02a9a0
+# Under attack, combat music, shield hits read from the HUD
+@ 5.000
+  read play under_attack side=both scale=1 pan=0 amount=0 at=+0  origin=rule:elite/under_attack
+  read overlay elite/attacked_flash  origin=rule:elite/under_attack
+  read overlay elite/attacked_buzz  origin=rule:elite/under_attack
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out L2 VIBRATION [1 5 25] R2 VIBRATION [1 5 25] light 255 30 30 @200
+  shown light=hit l2=hit r2=hit
+  synth on on
+@ 5.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  (same for 6 more ticks)
+@ 5.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 100  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  screen play shield_hit side=both scale=0.5 pan=-0.6 amount=4 at=+0  origin=rule:elite/shield_hit
+  screen ask hud fast=true  origin=lua:elite/lua/hud.lua:90
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+@ 5.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+@ 5.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out L2 WEAPON [2 5 4] R2 WEAPON [2 5 6] light 0 255 60 @200
+  shown light=hull_full l2=ship_weapons_l r2=ship_weapons_r
+@ 5.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @199
+@ 5.300
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @197
+@ 5.325
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @193
+@ 5.350
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @188
+@ 5.375
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @181
+@ 5.400
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @173
+  synth off off
+@ 5.425
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @165
+@ 5.450
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @155
+@ 5.475
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @145
+@ 5.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @135
+@ 5.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @125
+@ 5.550
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @115
+@ 5.575
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @105
+@ 5.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @97
+@ 5.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @89
+@ 5.650
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @82
+@ 5.675
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @77
+@ 5.700
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @73
+@ 5.725
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @71
+@ 5.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @70
+@ 5.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @71
+@ 5.800
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @73
+@ 5.825
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @77
+@ 5.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @82
+@ 5.875
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @89
+@ 5.900
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 96  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  screen play shield_hit side=both scale=0.6 pan=0.5 amount=5 at=+0  origin=rule:elite/shield_hit
+  screen ask hud fast=true  origin=lua:elite/lua/hud.lua:90
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @97
+  synth off on
+@ 5.925
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @105
+@ 5.950
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @115
+@ 5.975
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @125
+@ 6.000
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @135
+@ 6.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @145
+@ 6.050
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @155
+@ 6.075
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @165
+@ 6.100
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @173
+@ 6.125
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @181
+  synth off off
+@ 6.150
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @188
+@ 6.175
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @193
+@ 6.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @197
+@ 6.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @199
+@ 6.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @200
+@ 6.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @199
+@ 6.300
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @197
+@ 6.325
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @193
+@ 6.350
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @188
+@ 6.375
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @181
+@ 6.400
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @173
+@ 6.425
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @165
+@ 6.450
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @155
+@ 6.475
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @145
+@ 6.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @135
+@ 6.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @125
+@ 6.550
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @115
+@ 6.575
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @105
+@ 6.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 91  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  screen play shield_hit side=both scale=1 pan=0 amount=13 at=+0  origin=rule:elite/shield_hit
+  screen ask hud fast=true  origin=lua:elite/lua/hud.lua:90
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @97
+  synth on on
+@ 6.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @89
+@ 6.650
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @82
+@ 6.675
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @77
+@ 6.700
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @73
+@ 6.725
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @71
+@ 6.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @70
+@ 6.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @71
+@ 6.800
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @73
+@ 6.825
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @77
+@ 6.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @82
+@ 6.875
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @89
+@ 6.900
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @97
+@ 6.925
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @105
+@ 6.950
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @115
+@ 6.975
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @125
+@ 7.000
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @135
+@ 7.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @145
+@ 7.050
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @155
+@ 7.075
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @165
+@ 7.100
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @173
+@ 7.125
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @181
+@ 7.150
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @188
+@ 7.175
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @193
+@ 7.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @197
+  synth off off
+@ 7.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @199
+@ 7.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @200
+@ 7.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @199
+@ 7.300
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @197
+@ 7.325
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @193
+@ 7.350
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @188
+@ 7.375
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @181
+@ 7.400
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @173
+@ 7.425
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @165
+@ 7.450
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @155
+@ 7.475
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=true list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  out light 0 255 60 @145
+audio a3de2ced
+# Shields down, a hull hit
+@ 7.500
+  read play shields_down side=both scale=1 pan=0 amount=0 at=+0  origin=rule:elite/shields_down
+  read overlay elite/shields_lost  origin=rule:elite/shields_down
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 78  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  screen ask hud fast=true  origin=lua:elite/lua/hud.lua:90
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+  shown light=shields_down l2=ship_weapons_l r2=ship_weapons_r
+  synth on on
+@ 7.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 2 more ticks)
+@ 7.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 7.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 7.675
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 7.700
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 7.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 7.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 2 more ticks)
+@ 7.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 7.875
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 7.925
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 7.950
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.000
+  read play hull_hit side=both scale=1 pan=0 amount=0 at=+0  origin=rule:elite/hull_hit
+  read overlay elite/hull_damaged  origin=rule:elite/hull_damaged
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @200
+  shown light=hit l2=ship_weapons_l r2=ship_weapons_r
+@ 8.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.075
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @0
+@ 8.100
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+@ 8.125
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @200
+@ 8.150
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @0
+@ 8.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+@ 8.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @200
+@ 8.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.325
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @0
+@ 8.350
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+@ 8.375
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @200
+@ 8.400
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.450
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @0
+@ 8.475
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+@ 8.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @200
+@ 8.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.575
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 30 30 @0
+@ 8.600
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+  shown light=shields_down l2=ship_weapons_l r2=ship_weapons_r
+@ 8.625
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.675
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 8.700
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 8.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 2 more ticks)
+@ 8.850
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 8.875
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 8.925
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 8.950
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 1 more tick)
+@ 9.000
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 9.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 9.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 9.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+audio cc029677
+# Kill confirmed
+@ 9.500
+  read play kill side=both scale=1 pan=0 amount=0 at=+0  origin=rule:elite/kill_bounty
+  read overlay elite/kill  origin=rule:elite/kill_bounty
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 0 255 0 @200
+  shown light=kill l2=ship_weapons_l r2=ship_weapons_r
+@ 9.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 26 more ticks)
+@ 10.200
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+  shown light=shields_down l2=ship_weapons_l r2=ship_weapons_r
+@ 10.225
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+@ 10.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 10.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 10.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 10.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 10.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 10.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 11.000
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 11.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 11.250
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 11.275
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 11.500
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 11.525
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 11.750
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @0
+@ 11.775
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 8 more ticks)
+@ 12.000
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  out light 255 0 0 @200
+@ 12.025
+  read fact fire_group 1  origin=lua:elite/lua/state.lua:452
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=true held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=true  origin=lua:elite/lua/hud.lua:61
+  drive ask binds look_controls=true  origin=lua:elite/lua/state.lua:492
+  drive layer shields_offline feel=shields_offline level=0.45 side=both  origin=rule:elite/shields_offline
+  (same for 2 more ticks)
+@ 12.100
+  log Elite Dangerous closed
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  facts running=false active=true menu=false context="normal space, weapons out"
+  before_screen ask hud active=false held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=false  origin=lua:elite/lua/hud.lua:61
+  out handback
+  idle ask binds reset_headlook=true  origin=lua:elite/lua/state.lua:498
+@ 12.125
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=false held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=false  origin=lua:elite/lua/hud.lua:61
+  idle ask binds reset_headlook=true  origin=lua:elite/lua/state.lua:498
+  (same for 2 more ticks)
+@ 12.200
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=false held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=false  origin=lua:elite/lua/hud.lua:61
+  idle ask binds reset_headlook=true  origin=lua:elite/lua/state.lua:498
+  synth off off
+@ 12.225
+  read fact shield 0  origin=lua:elite/lua/state.lua:457
+  before_screen ask hud active=false held={l2:false,r2:false} learn=false list_key=1 list_out=true lists=false  origin=lua:elite/lua/hud.lua:61
+  idle ask binds reset_headlook=true  origin=lua:elite/lua/state.lua:498
+  (same for 11 more ticks)
+audio a035b461
+end @ 12.500

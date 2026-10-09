@@ -1,0 +1,9 @@
+// Elite's music tracks the state reads:
+// the main menu track, the combat tracks and the tracks that play near
+// Thargoids. The journal names the track in its Music event.
+{
+  "main_menu": "MainMenu",
+  "combat_prefix": "Combat_",
+  "combat": ["Interdiction"],
+  "thargoid": ["Unknown_Encounter", "Unknown_Exploration", "Unknown_Settlement", "Combat_Unknown"]
+}

@@ -1,0 +1,79 @@
+// Journal events and their feels, with the moments as overlays
+// (lights.json). Rules see live events only; the state the journal builds
+// (state.lua) has run for the event before them.
+{
+  "format": 1,
+  "rules": {
+    // journalFeels: one feel per event
+    "supercruise_in":       { "on": "journal:SupercruiseEntry",   "play": "supercruise_in" },
+    "supercruise_out":      { "on": "journal:SupercruiseExit",    "play": "supercruise_out" },
+    "docked":               { "on": "journal:Docked",             "play": "docked" },
+    "undocked":             { "on": "journal:Undocked",           "play": "undocked" },
+    "touchdown":            { "on": "journal:Touchdown",          "play": "touchdown" },
+    "liftoff":              { "on": "journal:Liftoff",            "play": "liftoff" },
+    "vehicle_srv":          { "on": "journal:LaunchSRV",          "play": "vehicle" },
+    "vehicle_srv_dock":     { "on": "journal:DockSRV",            "play": "vehicle" },
+    "vehicle_fighter":      { "on": "journal:LaunchFighter",      "play": "vehicle" },
+    "vehicle_fighter_dock": { "on": "journal:DockFighter",        "play": "vehicle" },
+    "heat_damage":          { "on": "journal:HeatDamage",         "play": "heat_damage" },
+    "honk":                 { "on": "journal:FSSDiscoveryScan",   "play": "honk" },
+    "escaped":              { "on": "journal:EscapeInterdiction", "play": "escaped" },
+    "hull_breach":          { "on": "journal:CockpitBreached",    "play": "hull_breach" },
+    "systems_shutdown":     { "on": "journal:SystemsShutdown",    "play": "systems_shutdown" },
+    "cargo_collect":        { "on": "journal:CollectCargo",       "play": "cargo_collect" },
+    "cargo_eject":          { "on": "journal:EjectCargo",         "play": "cargo_eject" },
+    "limpet":               { "on": "journal:LaunchDrone",        "play": "limpet" },
+
+    // journalFeels with a moment: the lightbar flashes, and for the jet
+    // cone the triggers buzz too
+    "died":        { "on": "journal:Died",         "do": [ { "play": "died" }, { "overlay": "died" } ] },
+    "jet_cone":    { "on": "journal:JetConeBoost", "do": [ { "play": "jet_cone" }, { "overlay": "jet_cone" }, { "overlay": "jet_cone_buzz" } ] },
+    "interdicted": { "on": "journal:Interdicted",  "do": [ { "play": "interdicted" }, { "overlay": "interdicted" } ] },
+
+    // a repair or a revive ends the died blink (the state forgets the death)
+    "repaired": { "on": "journal:RepairAll", "do": [ { "overlay_stop": "died" } ] },
+    "revived":  { "on": "journal:Resurrect", "do": [ { "overlay_stop": "died" } ] },
+
+    // the shields came up or went down
+    "shields_up":   { "on": "journal:ShieldState", "if": "ev.ShieldsUp == true",
+                      "do": [ { "play": "shields_up" }, { "overlay": "shields_raised" } ] },
+    "shields_down": { "on": "journal:ShieldState", "if": "ev.ShieldsUp ~= true",
+                      "do": [ { "play": "shields_down" }, { "overlay": "shields_lost" } ] },
+
+    // the HUD's hull % gives every hit, the journal only 20% steps
+    "hull_hit": { "on": "journal:HullDamage",
+                  "if": "(ev.Fighter == true) == (st ~= nil and st.flags.InFighter == true) and (hud == nil or not kit.fresh(hud.hull, t.now, 3000))",
+                  "play": "hull_hit" },
+    // the hull dropped: the state remembered a hull-damaged moment (kind
+    // 0) for this very event, so the lightbar flashes
+    "hull_damaged": { "on": "journal:HullDamage",
+                      "if": "#state.moments > 0 and state.moments[#state.moments].kind == 0 and state.moments[#state.moments].at == ev.at",
+                      "do": [ { "overlay": "hull_damaged" } ] },
+
+    // aimed at the player: a flash and a short buzz
+    "under_attack": { "on": "journal:UnderAttack", "if": "ev.Target == 'You'",
+                      "do": [ { "play": "under_attack" }, { "overlay": "attacked_flash" }, { "overlay": "attacked_buzz" } ] },
+
+    // a kill
+    "kill_bounty":        { "on": "journal:Bounty",          "do": [ { "play": "kill" }, { "overlay": "kill" } ] },
+    "kill_faction_bond":  { "on": "journal:FactionKillBond", "do": [ { "play": "kill" }, { "overlay": "kill" } ] },
+    "kill_cap_ship_bond": { "on": "journal:CapShipBond",     "do": [ { "play": "kill" }, { "overlay": "kill" } ] },
+
+    "heat_warning":    { "on": "journal:HeatWarning",    "do": [ { "play": "heat_warning" }, { "overlay": "heat_warning" } ] },
+    "docking_granted": { "on": "journal:DockingGranted", "do": [ { "play": "docking_granted" }, { "overlay": "docking_granted" } ] },
+    "docking_denied":  { "on": "journal:DockingDenied",  "do": [ { "overlay": "docking_denied" } ] },
+
+    // players and the wing only: NPC lines come on the "npc" channel with
+    // $-names
+    "message": { "on": "journal:ReceiveText",
+                 "if": "ev.Channel ~= 'npc' and kit.has(ev.From) and ev.From ~= '' and not kit.has_prefix(ev.From, '$')",
+                 "play": "message" },
+
+    // one sweep per scanning ship: a scan often comes as several events
+    "scanned": { "on": "journal:Scanned", "cooldown_ms": 10000, "play": "scanned" },
+
+    // a lock on a new target, before any scan of it
+    "target_locked": { "on": "journal:ShipTargeted", "if": "ev.TargetLocked == true and ev.ScanStage == nil",
+                       "play": "target_locked" }
+  }
+}

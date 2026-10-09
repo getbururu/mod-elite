@@ -1,0 +1,861 @@
+// Elite's settings: types, ranges, defaults, words and pages.
+{
+  "schema": 1,
+  "settings": {
+    "journal_dir": {
+      "type": "path",
+      "default": "",
+      "role": "path",
+      "restart": "session",
+      "label": "Journal folder",
+      "help": "Where Elite writes its journal and Status.json. Empty: Elite's standard folder. Applies with Apply now.",
+      "placeholder": "Elite's standard folder"
+    },
+    "bindings_dir": {
+      "type": "path",
+      "default": "",
+      "role": "path",
+      "restart": "session",
+      "label": "Bindings folder",
+      "help": "Where Elite keeps your control presets. Empty: Elite's standard folder. Applies with Apply now.",
+      "placeholder": "Elite's standard folder"
+    },
+    "haptics_gain": {
+      "type": "map",
+      "role": "feel_gain",
+      "needs": "haptics",
+      "of": { "type": "float", "min": 0, "max": 2, "step": 0.05, "unit": "%", "scale": 100 },
+      "default": {
+        "fire_primary": 1,
+        "fire_secondary": 1,
+        "spin_up": 1,
+        "rail_crack": 1,
+        "missile_launch": 1,
+        "reload": 1,
+        "reload_done": 1,
+        "thrust": 1,
+        "thrust_low": 1,
+        "boost": 1,
+        "boost_empty": 1,
+        "maneuver": 1,
+        "maneuver_kick": 1,
+        "fa_off": 1,
+        "fa_on": 1,
+        "hardpoints": 1,
+        "landing_gear": 1,
+        "cargo_scoop": 1,
+        "silent_running": 1,
+        "pips": 1,
+        "fire_group": 1,
+        "target_locked": 1,
+        "heat_sink": 1,
+        "chaff": 1,
+        "shield_cell": 1,
+        "ecm": 1,
+        "scanner": 1,
+        "utility": 1,
+        "limpet": 1,
+        "heat_build": 1,
+        "heat_warning": 1,
+        "heat_damage": 1,
+        "heat_notch": 1,
+        "overheat": 1,
+        "fsd_charge": 1,
+        "fsd_ready": 1,
+        "hyperspace": 1,
+        "supercruise_in": 1,
+        "supercruise_out": 1,
+        "mass_lock": 1,
+        "mass_unlock": 1,
+        "interdicted": 1,
+        "interdiction": 1,
+        "interdiction_noise": 1,
+        "escaped": 1,
+        "jet_cone": 1,
+        "fuel_scoop": 1,
+        "honk": 1,
+        "docked": 1,
+        "undocked": 1,
+        "touchdown": 1,
+        "liftoff": 1,
+        "vehicle": 1,
+        "docking_granted": 1,
+        "glide": 1,
+        "glide_low": 1,
+        "glide_start": 1,
+        "glide_end": 1,
+        "ground_rush": 1,
+        "shields_down": 1,
+        "shields_up": 1,
+        "shields_offline": 1,
+        "shield_hit": 1,
+        "shield_low": 1,
+        "shield_regen": 1,
+        "hull_hit": 1,
+        "hull_hit_hud": 1,
+        "hull_creak": 1,
+        "hull_breach": 1,
+        "under_attack": 1,
+        "kill": 1,
+        "died": 1,
+        "scanned": 1,
+        "target_hit": 1,
+        "target_hull_hit": 1,
+        "target_shield_break": 1,
+        "cargo_collect": 1,
+        "cargo_eject": 1,
+        "message": 1,
+        "thargoid": 1,
+        "thargoid_pulse": 1,
+        "systems_shutdown": 1,
+        "systems_reboot": 1,
+        "shot_kinetic": 1,
+        "shot_laser": 1,
+        "shot_plasma": 1,
+        "onfoot_shot": 1
+      },
+      "label": "Effect levels",
+      "help": "The level of each effect. 100% is normal, 0% turns it off.",
+      "groups": {
+        "flying": { "title": "Weapons and flying", "order": 1 },
+        "systems": { "title": "Ship systems", "order": 2 },
+        "travel": { "title": "Travel", "order": 3 },
+        "planets": { "title": "Planets and stations", "order": 4 },
+        "combat": { "title": "Combat", "order": 5 },
+        "rest": { "title": "Cargo, Thargoids and on foot", "order": 6 }
+      },
+      "entries": {
+        "fire_primary": { "label": "Primary fire", "help": "R2's weapons while you fire.", "group": "flying" },
+        "fire_secondary": { "label": "Secondary fire", "help": "L2's weapons while you fire.", "group": "flying" },
+        "spin_up": { "label": "Multi-cannon spin-up", "help": "The whir before multi-cannons fire.", "group": "flying" },
+        "rail_crack": { "label": "Railgun crack", "help": "The crack when a railgun fires.", "group": "flying" },
+        "missile_launch": { "label": "Missile launch", "help": "A thump for each missile press.", "group": "flying" },
+        "reload": { "label": "Clip out", "help": "A double clack when a clip drops out (HUD).", "group": "flying" },
+        "reload_done": { "label": "Clip in", "help": "A heavy thunk when a clip seats (HUD).", "group": "flying" },
+        "thrust": { "label": "Thrust", "help": "A light rumble while R1 is held.", "group": "flying" },
+        "thrust_low": { "label": "Thrust, low layer", "help": "The deep layer under thrust.", "group": "flying" },
+        "boost": { "label": "Boost", "help": "The surge of a boost.", "group": "flying" },
+        "boost_empty": { "label": "Boost without charge", "help": "A hollow dud when the engine capacitor is too low (HUD).", "group": "flying" },
+        "maneuver": { "label": "Turns", "help": "The turn feel.", "group": "flying" },
+        "maneuver_kick": { "label": "Flick", "help": "A soft push on a sudden flick of the controller.", "group": "flying" },
+        "fa_off": { "label": "Flight assist off", "help": "A click when flight assist goes off.", "group": "flying" },
+        "fa_on": { "label": "Flight assist on", "help": "A click when flight assist comes back.", "group": "flying" },
+        "hardpoints": { "label": "Hardpoints", "help": "Deploying or retracting the hardpoints.", "group": "systems" },
+        "landing_gear": { "label": "Landing gear", "help": "Lowering or raising the landing gear.", "group": "systems" },
+        "cargo_scoop": { "label": "Cargo scoop", "help": "Opening or closing the cargo scoop.", "group": "systems" },
+        "silent_running": { "label": "Silent running", "help": "Silent running on or off.", "group": "systems" },
+        "pips": { "label": "Pips", "help": "Moving power between systems.", "group": "systems" },
+        "fire_group": { "label": "Fire group", "help": "Changing the fire group.", "group": "systems" },
+        "target_locked": { "label": "Target lock", "help": "Locking a target.", "group": "systems" },
+        "heat_sink": { "label": "Heat sink", "help": "Firing a heat sink.", "group": "systems" },
+        "chaff": { "label": "Chaff", "help": "Firing chaff.", "group": "systems" },
+        "shield_cell": { "label": "Shield cell", "help": "Using a shield cell.", "group": "systems" },
+        "ecm": { "label": "ECM", "help": "Firing the ECM.", "group": "systems" },
+        "scanner": { "label": "Scanners", "help": "A hum while a scanner is held.", "group": "systems" },
+        "utility": { "label": "Other utilities", "help": "A click for the other utilities.", "group": "systems" },
+        "limpet": { "label": "Limpets", "help": "Launching a limpet.", "group": "systems" },
+        "heat_build": { "label": "Heat", "help": "A slow throb above about 40% heat that speeds up as heat rises.", "group": "systems" },
+        "heat_warning": { "label": "Heat warning", "help": "Elite's heat warning.", "group": "systems" },
+        "heat_damage": { "label": "Heat damage", "help": "Damage from heat.", "group": "systems" },
+        "heat_notch": { "label": "Heat steps", "help": "A thud at 60% heat and at every 10% after (HUD).", "group": "systems" },
+        "overheat": { "label": "Overheating", "help": "Boiling while overheating.", "group": "systems" },
+        "fsd_charge": { "label": "FSD charge", "help": "The soft pulse of the Calm jump feel.", "group": "travel" },
+        "fsd_ready": { "label": "FSD ready", "help": "The FSD is ready to jump.", "group": "travel" },
+        "hyperspace": { "label": "Hyperspace swell", "help": "The swell into the hyperspace tunnel.", "group": "travel" },
+        "supercruise_in": { "label": "Supercruise entry", "help": "Entering supercruise.", "group": "travel" },
+        "supercruise_out": { "label": "Supercruise drop", "help": "Dropping out of supercruise.", "group": "travel" },
+        "mass_lock": { "label": "Mass lock", "help": "Mass locked.", "group": "travel" },
+        "mass_unlock": { "label": "Mass lock clear", "help": "The mass lock ends.", "group": "travel" },
+        "interdicted": { "label": "Interdicted", "help": "An interdiction pulls you out.", "group": "travel" },
+        "interdiction": { "label": "Interdiction", "help": "The pull while you are interdicted.", "group": "travel" },
+        "interdiction_noise": { "label": "Interdiction noise", "help": "The noise layer of the interdiction.", "group": "travel" },
+        "escaped": { "label": "Escaped", "help": "Escaping an interdiction.", "group": "travel" },
+        "jet_cone": { "label": "Jet cone boost", "help": "A jet cone boost.", "group": "travel" },
+        "fuel_scoop": { "label": "Fuel scooping", "help": "While you scoop fuel.", "group": "travel" },
+        "honk": { "label": "FSS honk", "help": "The discovery scanner's honk.", "group": "travel" },
+        "docked": { "label": "Docked", "help": "The docking clamps.", "group": "planets" },
+        "undocked": { "label": "Undocked", "help": "Leaving the pad.", "group": "planets" },
+        "touchdown": { "label": "Touchdown", "help": "Landing on a planet.", "group": "planets" },
+        "liftoff": { "label": "Liftoff", "help": "Lifting off a planet.", "group": "planets" },
+        "vehicle": { "label": "SRV and fighter", "help": "Launching or docking an SRV or a fighter.", "group": "planets" },
+        "docking_granted": { "label": "Docking granted", "help": "Docking permission granted.", "group": "planets" },
+        "glide": { "label": "Glide", "help": "The glide into a planet.", "group": "planets" },
+        "glide_low": { "label": "Glide, low layer", "help": "The deep layer under the glide.", "group": "planets" },
+        "glide_start": { "label": "Atmosphere", "help": "Hitting the atmosphere.", "group": "planets" },
+        "glide_end": { "label": "Glide end", "help": "Leaving the glide.", "group": "planets" },
+        "ground_rush": { "label": "Ground rush", "help": "Dropping fast below 2500 m.", "group": "planets" },
+        "shields_down": { "label": "Shields down", "help": "The shields break: a long falling sweep, fading crackle and a dead thud.", "group": "combat" },
+        "shields_up": { "label": "Shields up", "help": "The shields come back.", "group": "combat" },
+        "shields_offline": { "label": "Shields offline", "help": "A low rattle while the shields are down.", "group": "combat" },
+        "shield_hit": {
+          "label": "Shield hit",
+          "help": "A push on the side that was hit, longer and stronger the more shield it took (HUD).",
+          "group": "combat"
+        },
+        "shield_low": { "label": "Shields low", "help": "A crackle at 40% shields or less (HUD).", "group": "combat" },
+        "shield_regen": { "label": "Shields refilling", "help": "Ticks while the shields refill (HUD).", "group": "combat" },
+        "hull_hit": { "label": "Hull hit", "help": "Hull damage from the journal.", "group": "combat" },
+        "hull_hit_hud": { "label": "Hull hit (HUD)", "help": "A heavy blow on each hull drop the HUD shows.", "group": "combat" },
+        "hull_creak": { "label": "Hull creak", "help": "Below 30% hull (HUD).", "group": "combat" },
+        "hull_breach": { "label": "Cockpit breach", "help": "The canopy breaks.", "group": "combat" },
+        "under_attack": { "label": "Under attack", "help": "Elite says you are under attack.", "group": "combat" },
+        "kill": { "label": "Kill", "help": "A kill, bounty or combat bond.", "group": "combat" },
+        "died": { "label": "Death", "help": "Your ship is destroyed.", "group": "combat" },
+        "scanned": { "label": "Scanned", "help": "A scan line from the left grip to the right when a ship scans you.", "group": "combat" },
+        "target_hit": { "label": "Your hits", "help": "A tick when your shots land (HUD).", "group": "combat" },
+        "target_hull_hit": { "label": "Your hull hits", "help": "Deeper, once the target's shields are down (HUD).", "group": "combat" },
+        "target_shield_break": { "label": "Target shields down", "help": "A shatter when the target's shields collapse (HUD).", "group": "combat" },
+        "cargo_collect": { "label": "Cargo scooped", "help": "Scooping cargo.", "group": "rest" },
+        "cargo_eject": { "label": "Cargo ejected", "help": "Ejecting cargo.", "group": "rest" },
+        "message": { "label": "Messages", "help": "Messages from players or your wing.", "group": "rest" },
+        "thargoid": { "label": "Thargoids", "help": "A slow throb while their music plays.", "group": "rest" },
+        "thargoid_pulse": { "label": "Thargoid pulse", "help": "The noise layer of that throb.", "group": "rest" },
+        "systems_shutdown": { "label": "Shutdown field", "help": "A Thargoid shutdown field powers everything down.", "group": "rest" },
+        "systems_reboot": { "label": "Reboot", "help": "The systems come back.", "group": "rest" },
+        "shot_kinetic": { "label": "On foot: kinetic", "help": "Each shot of a kinetic weapon on foot.", "group": "rest" },
+        "shot_laser": { "label": "On foot: laser", "help": "Each shot of a laser weapon on foot.", "group": "rest" },
+        "shot_plasma": { "label": "On foot: plasma", "help": "Each shot of a plasma weapon on foot.", "group": "rest" },
+        "onfoot_shot": { "label": "On foot: rumble", "help": "A shot on foot with the rumble fallback.", "group": "rest" }
+      }
+    },
+    "turn_feel": {
+      "type": "enum",
+      "default": "waves",
+      "needs": "haptics",
+      "label": "Turn feel",
+      "help": "Waves: a soft swell about every 2 seconds while the ship turns.",
+      "options": { "waves": "Waves", "push": "Push", "off": "Off" },
+      "by_value": {
+        "waves": "Waves: a soft swell about every 2 seconds while the ship turns.",
+        "push": "Push: a soft push when a turn starts, changes or ends.",
+        "off": "Off: nothing."
+      }
+    },
+    "jump_feel": {
+      "type": "enum",
+      "default": "swell",
+      "needs": "haptics",
+      "label": "Jump feel",
+      "help": "Swell: one soft swell into the hyperspace tunnel.",
+      "options": { "swell": "Swell", "calm": "Calm", "off": "Off" },
+      "by_value": {
+        "swell": "Swell: one soft swell into the hyperspace tunnel.",
+        "calm": "Calm: the swell, and a soft pulse every second while the FSD charges.",
+        "off": "Off: nothing."
+      }
+    },
+    "fire_groups": {
+      "type": "map",
+      "needs": "haptics",
+      "label": "Fire groups",
+      "help": "The weapon feel per fire group. Auto uses what the HUD showed for that group, else a guess from your loadout. A group not listed here is Auto.",
+      "entry_label": "Fire group {key}",
+      "entry_help": "Auto: the weapon the HUD shows for this group.",
+      "key": { "type": "int", "min": 1, "max": 99 },
+      "of": {
+        "type": "record",
+        "fields": {
+          "primary": {
+            "type": "enum",
+            "label": "R2",
+            "options": {
+              "auto": "Auto",
+              "beam": "Beam laser",
+              "pulse": "Pulse laser",
+              "burst": "Burst laser",
+              "multicannon": "Multi-cannon",
+              "cannon": "Cannon",
+              "fragment": "Fragment cannon",
+              "railgun": "Railgun",
+              "plasma": "Plasma accelerator",
+              "missile": "Missiles",
+              "mining": "Mining laser",
+              "generic": "Generic"
+            }
+          },
+          "secondary": {
+            "type": "enum",
+            "label": "L2",
+            "options": {
+              "auto": "Auto",
+              "beam": "Beam laser",
+              "pulse": "Pulse laser",
+              "burst": "Burst laser",
+              "multicannon": "Multi-cannon",
+              "cannon": "Cannon",
+              "fragment": "Fragment cannon",
+              "railgun": "Railgun",
+              "plasma": "Plasma accelerator",
+              "missile": "Missiles",
+              "mining": "Mining laser",
+              "generic": "Generic"
+            }
+          }
+        }
+      },
+      "default": {
+        "1": { "primary": "auto", "secondary": "auto" },
+        "2": { "primary": "auto", "secondary": "auto" }
+      }
+    },
+    "spin_up_ms": {
+      "type": "map",
+      "needs": "haptics",
+      "clamp": "file",
+      "label": "Multi-cannon spin-up",
+      "help": "How long multi-cannons spin up before they fire, by hardpoint size. If the rattle starts before or after your guns, change the size you fly.",
+      "of": { "type": "int", "min": 0, "max": 5000, "step": 50, "unit": "ms" },
+      "default": { "small": 250, "medium": 500, "large": 1500, "huge": 0 },
+      "entries": {
+        "small": { "label": "Small" },
+        "medium": { "label": "Medium" },
+        "large": { "label": "Large" },
+        "huge": { "label": "Huge" }
+      }
+    },
+    "gyro_off_gui_focus": {
+      "type": "intset",
+      "min": 1,
+      "max": 11,
+      "needs": "gyro",
+      "default": [1, 2, 3, 4, 5, 6, 7, 8, 11],
+      "label": "Panels with the gyro off",
+      "help": "The main menu is always included.",
+      "entries": {
+        "1": { "label": "Right panel" },
+        "2": { "label": "Left panel" },
+        "3": { "label": "Comms panel" },
+        "4": { "label": "Role panel" },
+        "5": { "label": "Station services" },
+        "6": { "label": "Galaxy map" },
+        "7": { "label": "System map" },
+        "8": { "label": "Orrery" },
+        "9": { "label": "FSS" },
+        "10": { "label": "Surface scanner" },
+        "11": { "label": "Codex" }
+      }
+    },
+    "hud_reader": {
+      "type": "bool",
+      "default": true,
+      "needs": "screen",
+      "label": "HUD reader",
+      "row": "Read the cockpit HUD",
+      "help": "Shields, heat and fire groups from your screen. Run Elite borderless or windowed."
+    },
+    "hud_debug": {
+      "type": "bool",
+      "default": false,
+      "needs": "screen",
+      "label": "Save HUD captures",
+      "help": "Small pictures of the HUD, for a problem report.",
+      "confirm": {
+        "title": "Save HUD captures?",
+        "text": "Bururu saves small screen captures of the HUD to the hud_debug folder while it reads the HUD. They show what was on your screen. Turn this off when you are done.",
+        "ok": "Save captures"
+      }
+    },
+    "hud_colors": {
+      "type": "map",
+      "needs": "screen",
+      "of": { "type": "hex" },
+      "default": {},
+      "label": "HUD colours",
+      "help": "An empty colour is automatic: Bururu learns it from your screen, else uses your colour matrix, else Elite's standard colour. Set colours here for EDHM themes or filters.",
+      "entries": {
+        "shield": { "label": "Shield %", "help": "The shield % and the ship hologram. Setting it stops the learning.", "placeholder": "#29c8cf" },
+        "heat": { "label": "Heat %", "help": "The heat %. Setting it stops the learning.", "placeholder": "#ba6c16" },
+        "hull": { "label": "HUD main colour", "help": "The hull %, the capacitors and the weapon lists.", "placeholder": "#d6870c" },
+        "flame": { "label": "Heat icon", "help": "The heat icon, and out-of-range weapons.", "placeholder": "#931e1b" },
+        "flash": {
+          "label": "Hit flashes",
+          "help": "Hit flashes on the hologram. Off: hits are felt from the shield % dropping.",
+          "placeholder": "#3862c1",
+          "also": ["off"]
+        }
+      }
+    },
+    "colors": {
+      "type": "map",
+      "role": "color_table",
+      "needs": "lightbar",
+      "of": { "type": "rgb", "min": 0, "max": 255 },
+      "default": {
+        "hull_full": [0, 255, 60],
+        "hull_half": [255, 190, 0],
+        "hull_low": [255, 0, 0],
+        "supercruise": [30, 80, 255],
+        "hyperspace": [140, 170, 255],
+        "fsd_charge": [255, 255, 255],
+        "fuel_scoop": [255, 150, 0],
+        "interdiction": [255, 0, 200],
+        "jet_cone": [0, 255, 255],
+        "shields_down": [255, 0, 0],
+        "shields_up": [0, 160, 255],
+        "hit": [255, 30, 30],
+        "kill": [0, 255, 0],
+        "overheat": [255, 90, 0],
+        "died": [255, 0, 0],
+        "docked": [200, 200, 255],
+        "docking_ok": [0, 255, 80],
+        "docking_no": [255, 40, 0],
+        "srv": [0, 200, 160],
+        "low_oxygen": [0, 120, 255]
+      },
+      "label": "Lightbar colours",
+      "groups": {
+        "hull": { "title": "Hull and health", "order": 1 },
+        "travel": { "title": "Travel", "order": 2 },
+        "combat": { "title": "Combat", "order": 3 },
+        "docking": { "title": "Docking", "order": 4 },
+        "srv_foot": { "title": "SRV and on foot", "order": 5 }
+      },
+      "entries": {
+        "hull_full": { "label": "Hull full", "help": "Your hull at 100%, or your health on foot.", "group": "hull", "pattern": "Steady" },
+        "hull_half": { "label": "Hull half", "help": "At 50%.", "group": "hull", "pattern": "Steady" },
+        "hull_low": { "label": "Hull low", "help": "At 20% and below.", "group": "hull", "pattern": "Steady" },
+        "supercruise": { "label": "Supercruise", "help": "The colour in supercruise.", "group": "travel", "pattern": "Steady" },
+        "hyperspace": { "label": "Hyperspace", "help": "The jump countdown and the jump, breathing.", "group": "travel", "pattern": "Breathing" },
+        "fsd_charge": { "label": "FSD charging", "help": "Rises over 5 s while the FSD charges.", "group": "travel", "pattern": "Rising" },
+        "fuel_scoop": { "label": "Fuel scooping", "help": "Breathing while you scoop fuel.", "group": "travel", "pattern": "Breathing" },
+        "interdiction": { "label": "Interdiction", "help": "Breathing while you are interdicted.", "group": "travel", "pattern": "Breathing" },
+        "jet_cone": { "label": "Jet cone boost", "help": "A flash on a jet cone boost.", "group": "travel", "pattern": "Flash" },
+        "shields_down": {
+          "label": "Shields down",
+          "help": "Blinks while the shields are down, and flashes when they drop.",
+          "group": "combat",
+          "pattern": "Blink"
+        },
+        "shields_up": { "label": "Shields up", "help": "A flash when the shields come back.", "group": "combat", "pattern": "Flash" },
+        "hit": { "label": "Hit", "help": "A flash on hull damage and attacks.", "group": "combat", "pattern": "Flash" },
+        "kill": { "label": "Kill", "help": "A flash on kills, bounties and combat bonds.", "group": "combat", "pattern": "Flash" },
+        "overheat": { "label": "Overheating", "help": "Blinks while overheating, and flashes on heat warnings.", "group": "combat", "pattern": "Blink" },
+        "died": { "label": "Death", "help": "Blinks for 5 s when you die.", "group": "combat", "pattern": "Blink" },
+        "docked": { "label": "Docked", "help": "A dim colour while docked or landed.", "group": "docking", "pattern": "Steady, dim" },
+        "docking_ok": { "label": "Docking granted", "help": "A flash.", "group": "docking", "pattern": "Flash" },
+        "docking_no": { "label": "Docking denied", "help": "A flash.", "group": "docking", "pattern": "Flash" },
+        "srv": { "label": "SRV", "help": "The colour in the SRV.", "group": "srv_foot", "pattern": "Steady" },
+        "low_oxygen": { "label": "Low oxygen", "help": "Blinks on foot when oxygen runs low.", "group": "srv_foot", "pattern": "Blink" }
+      }
+    },
+    "triggers": {
+      "type": "map",
+      "role": "trigger_table",
+      "needs": "triggers",
+      "of": { "type": "trigger" },
+      "default": {
+        "ship_weapons_r": { "mode": "WEAPON", "params": [2, 5, 6] },
+        "ship_weapons_l": { "mode": "WEAPON", "params": [2, 5, 4] },
+        "ship_reload_r": { "mode": "OFF", "params": [] },
+        "ship_reload_l": { "mode": "OFF", "params": [] },
+        "ship_wep_empty_r": { "mode": "OFF", "params": [] },
+        "ship_wep_empty_l": { "mode": "OFF", "params": [] },
+        "ship_overheat_r": { "mode": "VIBRATION", "params": [2, 6, 12] },
+        "ship_overheat_l": { "mode": "VIBRATION", "params": [2, 6, 12] },
+        "ship_scanner_r": { "mode": "FEEDBACK", "params": [2, 3] },
+        "ship_scanner_l": { "mode": "FEEDBACK", "params": [2, 3] },
+        "interdiction": { "mode": "VIBRATION", "params": [1, 8, 30] },
+        "hit": { "mode": "VIBRATION", "params": [1, 5, 25] },
+        "jet_cone": { "mode": "VIBRATION", "params": [1, 8, 8] },
+        "srv_turret_r": { "mode": "WEAPON", "params": [2, 5, 5] },
+        "srv_turret_l": { "mode": "FEEDBACK", "params": [2, 2] },
+        "onfoot_r": { "mode": "WEAPON", "params": [2, 6, 5] },
+        "onfoot_l": { "mode": "FEEDBACK", "params": [3, 2] }
+      },
+      "label": "Trigger situations",
+      "groups": {
+        "ship": { "title": "In the ship", "order": 1 },
+        "both": { "title": "Both triggers", "order": 2 },
+        "srv_foot": { "title": "SRV and on foot", "order": 3 }
+      },
+      "entries": {
+        "ship_weapons_r": {
+          "label": "Hardpoints out R2",
+          "help": "R2 fires primary, L2 secondary.",
+          "group": "ship",
+          "card": "Primary fire",
+          "row": "Hardpoints out"
+        },
+        "ship_weapons_l": {
+          "label": "Hardpoints out L2",
+          "help": "R2 fires primary, L2 secondary.",
+          "group": "ship",
+          "card": "Secondary fire",
+          "row": "Hardpoints out"
+        },
+        "ship_reload_r": {
+          "label": "Reloading R2",
+          "help": "Every weapon on that trigger reloading (HUD).",
+          "group": "ship",
+          "card": "Primary fire",
+          "row": "Reloading"
+        },
+        "ship_reload_l": {
+          "label": "Reloading L2",
+          "help": "Every weapon on that trigger reloading (HUD).",
+          "group": "ship",
+          "card": "Secondary fire",
+          "row": "Reloading"
+        },
+        "ship_wep_empty_r": {
+          "label": "Weapons capacitor empty R2",
+          "help": "Firing with the weapons capacitor empty (HUD).",
+          "group": "ship",
+          "card": "Primary fire",
+          "row": "Weapons capacitor empty"
+        },
+        "ship_wep_empty_l": {
+          "label": "Weapons capacitor empty L2",
+          "help": "Firing with the weapons capacitor empty (HUD).",
+          "group": "ship",
+          "card": "Secondary fire",
+          "row": "Weapons capacitor empty"
+        },
+        "ship_overheat_r": {
+          "label": "Overheating R2",
+          "help": "Hardpoints out and overheating.",
+          "group": "ship",
+          "card": "Primary fire",
+          "row": "Overheating"
+        },
+        "ship_overheat_l": {
+          "label": "Overheating L2",
+          "help": "Hardpoints out and overheating.",
+          "group": "ship",
+          "card": "Secondary fire",
+          "row": "Overheating"
+        },
+        "ship_scanner_r": {
+          "label": "Analysis mode R2",
+          "help": "Analysis mode, hardpoints out, for the scanners.",
+          "group": "ship",
+          "card": "Right trigger",
+          "row": "Analysis mode"
+        },
+        "ship_scanner_l": {
+          "label": "Analysis mode L2",
+          "help": "Analysis mode, hardpoints out, for the scanners.",
+          "group": "ship",
+          "card": "Left trigger",
+          "row": "Analysis mode"
+        },
+        "interdiction": { "label": "Interdiction", "help": "Being interdicted.", "group": "both", "card": "Both triggers" },
+        "hit": { "label": "Hit", "help": "Attacked: both triggers for 0.25 s.", "group": "both", "card": "Both triggers" },
+        "jet_cone": { "label": "Jet cone boost", "help": "Both triggers for 1 s.", "group": "both", "card": "Both triggers" },
+        "srv_turret_r": { "label": "SRV turret R2", "help": "The SRV's turret view.", "group": "srv_foot", "card": "Right trigger", "row": "SRV turret" },
+        "srv_turret_l": { "label": "SRV turret L2", "help": "The SRV's turret view.", "group": "srv_foot", "card": "Left trigger", "row": "SRV turret" },
+        "onfoot_r": {
+          "label": "On foot R2",
+          "help": "Outside social spaces, stations and hangars.",
+          "group": "srv_foot",
+          "card": "Right trigger",
+          "row": "On foot"
+        },
+        "onfoot_l": {
+          "label": "On foot L2",
+          "help": "Outside social spaces, stations and hangars.",
+          "group": "srv_foot",
+          "card": "Left trigger",
+          "row": "On foot"
+        }
+      }
+    },
+    "rumble": {
+      "type": "map",
+      "role": "feel_rumble",
+      "needs": "rumble",
+      "of": { "type": "rumble", "min": 0, "max": 1, "step": 0.01 },
+      "default": {
+        "fire_primary": { "left": 0, "right": 0.22, "ms": 0 },
+        "fire_secondary": { "left": 0.22, "right": 0, "ms": 0 },
+        "reload": { "left": 0.25, "right": 0.25, "ms": 60 },
+        "reload_done": { "left": 0.45, "right": 0.45, "ms": 90 },
+        "thrust": { "left": 0.08, "right": 0.08, "ms": 0 },
+        "boost": { "left": 0.7, "right": 0.7, "ms": 900 },
+        "boost_empty": { "left": 0.3, "right": 0.3, "ms": 80 },
+        "maneuver_kick": { "left": 0.25, "right": 0.25, "ms": 60 },
+        "fa_off": { "left": 0.2, "right": 0.2, "ms": 50 },
+        "fa_on": { "left": 0.2, "right": 0.2, "ms": 50 },
+        "hardpoints": { "left": 0.35, "right": 0.35, "ms": 150 },
+        "landing_gear": { "left": 0.4, "right": 0.4, "ms": 300 },
+        "cargo_scoop": { "left": 0.25, "right": 0.25, "ms": 180 },
+        "silent_running": { "left": 0.2, "right": 0.2, "ms": 150 },
+        "pips": { "left": 0, "right": 0.18, "ms": 50 },
+        "fire_group": { "left": 0.18, "right": 0, "ms": 50 },
+        "target_locked": { "left": 0, "right": 0.12, "ms": 40 },
+        "heat_sink": { "left": 0.4, "right": 0.4, "ms": 400 },
+        "chaff": { "left": 0.35, "right": 0.35, "ms": 300 },
+        "shield_cell": { "left": 0.3, "right": 0.3, "ms": 900 },
+        "ecm": { "left": 0.5, "right": 0.5, "ms": 700 },
+        "scanner": { "left": 0.08, "right": 0.08, "ms": 0 },
+        "utility": { "left": 0.2, "right": 0.2, "ms": 40 },
+        "limpet": { "left": 0.2, "right": 0.2, "ms": 80 },
+        "heat_warning": { "left": 0.3, "right": 0.3, "ms": 80 },
+        "heat_damage": { "left": 0.6, "right": 0.6, "ms": 300 },
+        "heat_notch": { "left": 0.25, "right": 0.25, "ms": 80 },
+        "overheat": { "left": 0.3, "right": 0.3, "ms": 0 },
+        "fsd_charge": { "left": 0.35, "right": 0.35, "ms": 0 },
+        "fsd_ready": { "left": 0, "right": 0.2, "ms": 60 },
+        "hyperspace": { "left": 0.1, "right": 0.1, "ms": 0 },
+        "supercruise_in": { "left": 0.45, "right": 0.45, "ms": 350 },
+        "supercruise_out": { "left": 0.75, "right": 0.75, "ms": 500 },
+        "mass_lock": { "left": 0.3, "right": 0.3, "ms": 120 },
+        "mass_unlock": { "left": 0.15, "right": 0.15, "ms": 80 },
+        "interdicted": { "left": 0.6, "right": 0.6, "ms": 600 },
+        "interdiction": { "left": 0.55, "right": 0.55, "ms": 0 },
+        "escaped": { "left": 0.4, "right": 0.4, "ms": 300 },
+        "jet_cone": { "left": 0.8, "right": 0.8, "ms": 1500 },
+        "fuel_scoop": { "left": 0.1, "right": 0.04, "ms": 0 },
+        "honk": { "left": 0.5, "right": 0.5, "ms": 1200 },
+        "docked": { "left": 0.5, "right": 0.5, "ms": 350 },
+        "undocked": { "left": 0.35, "right": 0.35, "ms": 300 },
+        "touchdown": { "left": 0.6, "right": 0.6, "ms": 400 },
+        "liftoff": { "left": 0.3, "right": 0.3, "ms": 300 },
+        "vehicle": { "left": 0.45, "right": 0.45, "ms": 350 },
+        "docking_granted": { "left": 0.15, "right": 0.15, "ms": 70 },
+        "glide_start": { "left": 0.5, "right": 0.5, "ms": 500 },
+        "glide_end": { "left": 0.3, "right": 0.3, "ms": 300 },
+        "shields_down": { "left": 1.0, "right": 1.0, "ms": 600 },
+        "shields_up": { "left": 0.25, "right": 0.25, "ms": 80 },
+        "shield_hit": { "left": 0.5, "right": 0.5, "ms": 120 },
+        "shield_regen": { "left": 0.08, "right": 0.08, "ms": 40 },
+        "hull_hit": { "left": 0.8, "right": 0.8, "ms": 350 },
+        "hull_hit_hud": { "left": 0.9, "right": 0.9, "ms": 300 },
+        "hull_breach": { "left": 1.0, "right": 1.0, "ms": 1000 },
+        "under_attack": { "left": 0.35, "right": 0.35, "ms": 150 },
+        "kill": { "left": 0.4, "right": 0.4, "ms": 90 },
+        "died": { "left": 1.0, "right": 1.0, "ms": 2000 },
+        "scanned": { "left": 0.25, "right": 0.25, "ms": 260 },
+        "target_hit": { "left": 0.2, "right": 0.2, "ms": 40 },
+        "target_hull_hit": { "left": 0.3, "right": 0.3, "ms": 60 },
+        "target_shield_break": { "left": 0.6, "right": 0.6, "ms": 350 },
+        "cargo_collect": { "left": 0.35, "right": 0.35, "ms": 120 },
+        "cargo_eject": { "left": 0.4, "right": 0.4, "ms": 200 },
+        "message": { "left": 0.15, "right": 0.15, "ms": 60 },
+        "systems_shutdown": { "left": 0.8, "right": 0.8, "ms": 1500 },
+        "systems_reboot": { "left": 0.4, "right": 0.4, "ms": 800 },
+        "onfoot_shot": { "left": 0, "right": 0.35, "ms": 80 }
+      },
+      "label": "Rumble fallback",
+      "help": "The rumble of each effect: the strength of the left and right motor in %, and the length in ms. Bururu rumbles only in Rumble mode. Continuous effects use only the strengths. A length of 0 turns a one-shot off.",
+      "groups": {
+        "flying": { "title": "Weapons and flying", "order": 1 },
+        "systems": { "title": "Ship systems", "order": 2 },
+        "travel": { "title": "Travel", "order": 3 },
+        "planets": { "title": "Planets and stations", "order": 4 },
+        "combat": { "title": "Combat", "order": 5 },
+        "rest": { "title": "Cargo, Thargoids and on foot", "order": 6 }
+      },
+      "entries": {
+        "fire_primary": { "label": "Primary fire", "help": "R2's weapons while you fire.", "group": "flying" },
+        "fire_secondary": { "label": "Secondary fire", "help": "L2's weapons while you fire.", "group": "flying" },
+        "reload": { "label": "Clip out", "help": "A double clack when a clip drops out (HUD).", "group": "flying" },
+        "reload_done": { "label": "Clip in", "help": "A heavy thunk when a clip seats (HUD).", "group": "flying" },
+        "thrust": { "label": "Thrust", "help": "A light rumble while R1 is held.", "group": "flying" },
+        "boost": { "label": "Boost", "help": "The surge of a boost.", "group": "flying" },
+        "boost_empty": { "label": "Boost without charge", "help": "A hollow dud when the engine capacitor is too low (HUD).", "group": "flying" },
+        "maneuver_kick": { "label": "Flick", "help": "A soft push on a sudden flick of the controller.", "group": "flying" },
+        "fa_off": { "label": "Flight assist off", "help": "A click when flight assist goes off.", "group": "flying" },
+        "fa_on": { "label": "Flight assist on", "help": "A click when flight assist comes back.", "group": "flying" },
+        "hardpoints": { "label": "Hardpoints", "help": "Deploying or retracting the hardpoints.", "group": "systems" },
+        "landing_gear": { "label": "Landing gear", "help": "Lowering or raising the landing gear.", "group": "systems" },
+        "cargo_scoop": { "label": "Cargo scoop", "help": "Opening or closing the cargo scoop.", "group": "systems" },
+        "silent_running": { "label": "Silent running", "help": "Silent running on or off.", "group": "systems" },
+        "pips": { "label": "Pips", "help": "Moving power between systems.", "group": "systems" },
+        "fire_group": { "label": "Fire group", "help": "Changing the fire group.", "group": "systems" },
+        "target_locked": { "label": "Target lock", "help": "Locking a target.", "group": "systems" },
+        "heat_sink": { "label": "Heat sink", "help": "Firing a heat sink.", "group": "systems" },
+        "chaff": { "label": "Chaff", "help": "Firing chaff.", "group": "systems" },
+        "shield_cell": { "label": "Shield cell", "help": "Using a shield cell.", "group": "systems" },
+        "ecm": { "label": "ECM", "help": "Firing the ECM.", "group": "systems" },
+        "scanner": { "label": "Scanners", "help": "A hum while a scanner is held.", "group": "systems" },
+        "utility": { "label": "Other utilities", "help": "A click for the other utilities.", "group": "systems" },
+        "limpet": { "label": "Limpets", "help": "Launching a limpet.", "group": "systems" },
+        "heat_warning": { "label": "Heat warning", "help": "Elite's heat warning.", "group": "systems" },
+        "heat_damage": { "label": "Heat damage", "help": "Damage from heat.", "group": "systems" },
+        "heat_notch": { "label": "Heat steps", "help": "A thud at 60% heat and at every 10% after (HUD).", "group": "systems" },
+        "overheat": { "label": "Overheating", "help": "Boiling while overheating.", "group": "systems" },
+        "fsd_charge": { "label": "FSD charge", "help": "The soft pulse of the Calm jump feel.", "group": "travel" },
+        "fsd_ready": { "label": "FSD ready", "help": "The FSD is ready to jump.", "group": "travel" },
+        "hyperspace": { "label": "Hyperspace swell", "help": "The swell into the hyperspace tunnel.", "group": "travel" },
+        "supercruise_in": { "label": "Supercruise entry", "help": "Entering supercruise.", "group": "travel" },
+        "supercruise_out": { "label": "Supercruise drop", "help": "Dropping out of supercruise.", "group": "travel" },
+        "mass_lock": { "label": "Mass lock", "help": "Mass locked.", "group": "travel" },
+        "mass_unlock": { "label": "Mass lock clear", "help": "The mass lock ends.", "group": "travel" },
+        "interdicted": { "label": "Interdicted", "help": "An interdiction pulls you out.", "group": "travel" },
+        "interdiction": { "label": "Interdiction", "help": "The pull while you are interdicted.", "group": "travel" },
+        "escaped": { "label": "Escaped", "help": "Escaping an interdiction.", "group": "travel" },
+        "jet_cone": { "label": "Jet cone boost", "help": "A jet cone boost.", "group": "travel" },
+        "fuel_scoop": { "label": "Fuel scooping", "help": "While you scoop fuel.", "group": "travel" },
+        "honk": { "label": "FSS honk", "help": "The discovery scanner's honk.", "group": "travel" },
+        "docked": { "label": "Docked", "help": "The docking clamps.", "group": "planets" },
+        "undocked": { "label": "Undocked", "help": "Leaving the pad.", "group": "planets" },
+        "touchdown": { "label": "Touchdown", "help": "Landing on a planet.", "group": "planets" },
+        "liftoff": { "label": "Liftoff", "help": "Lifting off a planet.", "group": "planets" },
+        "vehicle": { "label": "SRV and fighter", "help": "Launching or docking an SRV or a fighter.", "group": "planets" },
+        "docking_granted": { "label": "Docking granted", "help": "Docking permission granted.", "group": "planets" },
+        "glide_start": { "label": "Atmosphere", "help": "Hitting the atmosphere.", "group": "planets" },
+        "glide_end": { "label": "Glide end", "help": "Leaving the glide.", "group": "planets" },
+        "shields_down": { "label": "Shields down", "help": "The shields break: a long falling sweep, fading crackle and a dead thud.", "group": "combat" },
+        "shields_up": { "label": "Shields up", "help": "The shields come back.", "group": "combat" },
+        "shield_hit": {
+          "label": "Shield hit",
+          "help": "A push on the side that was hit, longer and stronger the more shield it took (HUD).",
+          "group": "combat"
+        },
+        "shield_regen": { "label": "Shields refilling", "help": "Ticks while the shields refill (HUD).", "group": "combat" },
+        "hull_hit": { "label": "Hull hit", "help": "Hull damage from the journal.", "group": "combat" },
+        "hull_hit_hud": { "label": "Hull hit (HUD)", "help": "A heavy blow on each hull drop the HUD shows.", "group": "combat" },
+        "hull_breach": { "label": "Cockpit breach", "help": "The canopy breaks.", "group": "combat" },
+        "under_attack": { "label": "Under attack", "help": "Elite says you are under attack.", "group": "combat" },
+        "kill": { "label": "Kill", "help": "A kill, bounty or combat bond.", "group": "combat" },
+        "died": { "label": "Death", "help": "Your ship is destroyed.", "group": "combat" },
+        "scanned": { "label": "Scanned", "help": "A scan line from the left grip to the right when a ship scans you.", "group": "combat" },
+        "target_hit": { "label": "Your hits", "help": "A tick when your shots land (HUD).", "group": "combat" },
+        "target_hull_hit": { "label": "Your hull hits", "help": "Deeper, once the target's shields are down (HUD).", "group": "combat" },
+        "target_shield_break": { "label": "Target shields down", "help": "A shatter when the target's shields collapse (HUD).", "group": "combat" },
+        "cargo_collect": { "label": "Cargo scooped", "help": "Scooping cargo.", "group": "rest" },
+        "cargo_eject": { "label": "Cargo ejected", "help": "Ejecting cargo.", "group": "rest" },
+        "message": { "label": "Messages", "help": "Messages from players or your wing.", "group": "rest" },
+        "systems_shutdown": { "label": "Shutdown field", "help": "A Thargoid shutdown field powers everything down.", "group": "rest" },
+        "systems_reboot": { "label": "Reboot", "help": "The systems come back.", "group": "rest" },
+        "onfoot_shot": { "label": "On foot: rumble", "help": "A shot on foot with the rumble fallback.", "group": "rest" }
+      }
+    }
+  },
+  "pages": {
+    "effects": {
+      "title": "Effects",
+      "icon": "waves",
+      "order": 1,
+      "tabs": {
+        "haptics": {
+          "title": "Haptics",
+          "order": 1,
+          "lead": "How the controller's haptics answer the game.",
+          "cards": {
+            "turns": {
+              "title": "Turns and jumps",
+              "order": 1,
+              "rows": [
+                { "widget": "choice", "path": "turn_feel" },
+                { "widget": "choice", "path": "jump_feel" }
+              ]
+            },
+            "fire_groups": {
+              "title": "Fire groups",
+              "order": 2,
+              "rows": [
+                { "widget": "keyed-list", "path": "fire_groups", "fact": "fire_group" }
+              ]
+            },
+            "fine_tune": {
+              "title": "Fine-tune",
+              "order": 3,
+              "rows": [
+                { "widget": "levels", "path": "haptics_gain" },
+                { "widget": "levels", "path": "spin_up_ms" },
+                { "widget": "rumble-table", "path": "rumble" }
+              ]
+            }
+          }
+        },
+        "triggers": {
+          "title": "Triggers",
+          "order": 2,
+          "lead": "The resistance of R2 and L2 in each situation.",
+          "cards": {
+            "situations": {
+              "order": 1,
+              "rows": [
+                {
+                  "widget": "situations",
+                  "path": "triggers",
+                  "pairs": [
+                    ["ship_weapons_r", "ship_weapons_l"],
+                    ["ship_reload_r", "ship_reload_l"],
+                    ["ship_wep_empty_r", "ship_wep_empty_l"],
+                    ["ship_overheat_r", "ship_overheat_l"],
+                    ["ship_scanner_r", "ship_scanner_l"],
+                    ["srv_turret_r", "srv_turret_l"],
+                    ["onfoot_r", "onfoot_l"]
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "lights": {
+          "title": "Lights",
+          "order": 3,
+          "lead": "The lightbar, the player LEDs and the mic LED.",
+          "cards": {
+            "colors": {
+              "title": "Lightbar colours",
+              "order": 1,
+              "rows": [
+                { "widget": "color-grid", "path": "colors", "preview": "pad" }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "icon": "gear",
+      "order": 2,
+      "cards": {
+        "hud": {
+          "title": "HUD reader",
+          "order": 1,
+          "rows": [
+            { "widget": "toggle", "path": "hud_reader" },
+            { "widget": "meter", "fact": "shield" },
+            { "widget": "meter", "fact": "heat" },
+            { "widget": "hex-chips", "path": "hud_colors" },
+            { "widget": "toggle", "path": "hud_debug" },
+            { "widget": "button", "action": "mod.folder:hud_debug", "label": "Open folder" }
+          ]
+        },
+        "menus": {
+          "title": "In menus",
+          "order": 2,
+          "rows": [
+            { "widget": "chips", "path": "gyro_off_gui_focus", "enabled_by": "core.gyro_off_in_menus" }
+          ]
+        },
+        "files": {
+          "title": "Elite's files",
+          "order": 3,
+          "rows": [
+            { "widget": "path", "path": "journal_dir" },
+            { "widget": "path", "path": "bindings_dir" }
+          ]
+        }
+      }
+    }
+  },
+  "live": {
+    "facts": {
+      "fire_group": { "label": "Fire group", "order": 1 },
+      "shield": { "label": "Shield", "unit": "%", "meter": true, "order": 2 },
+      "heat": { "label": "Heat", "unit": "%", "meter": true, "order": 3 }
+    }
+  },
+  "setup": {
+    "bindings": {
+      "label": "Custom control preset",
+      "fact": "bindings_ok",
+      "order": 1,
+      "help": "Heat sink, chaff and shield cell feels need a custom preset in Elite's controls."
+    },
+    "deadzones": {
+      "label": "Elite's dead zones",
+      "fact": "deadzones",
+      "order": 2,
+      "help": "Bururu reads them from your custom control preset. Elite makes one as soon as you change a binding."
+    }
+  },
+  "folders": { "hud_debug": "{ModData}/hud_debug" }
+}

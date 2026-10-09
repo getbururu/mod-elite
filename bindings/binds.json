@@ -1,0 +1,42 @@
+// How Elite writes a control preset (Options/Bindings/<preset>.binds):
+// one element per action or axis, its buttons and keys in Primary and
+// Secondary, a stick in Binding. The names on the left are the ones this
+// mod's rules and Lua use.
+{
+  "bindings": 1,
+  "preset": "PresetName",
+  "keys": ["Primary", "Secondary"],
+  "modifier": "Modifier",
+  "axis": "Binding",
+  "dead_zone": "Deadzone",
+  "device": "Device", "key": "Key", "value": "Value",
+
+  // the actions with a feel of their own, in the order they fire in a tick
+  "actions": { "heat_sink": "DeployHeatSink", "chaff": "FireChaffLauncher",
+               "shield_cell": "UseShieldCell", "boost": "UseBoostJuice",
+               "mouse_reset": "MouseReset" },
+  "axes": { "roll": "RollAxisRaw", "pitch": "PitchAxisRaw", "yaw": "YawAxisRaw",
+            "lateral": "LateralThrustRaw", "vertical": "VerticalThrustRaw" },
+  "turn": ["yaw", "pitch", "roll"],
+  "dead_zones": ["roll", "pitch", "lateral", "vertical"],
+
+  // head look: the mouse moves the view while it is held, or toggled on
+  "look": { "action": "HeadLookToggle", "toggle": "ToggleOn", "mouse": "MouseHeadlook" },
+  "mouse": { "turn": ["MouseXMode", "MouseYMode"], "decay": ["MouseXDecay", "MouseYDecay"] },
+
+  "keyboard": { "devices": ["Keyboard"], "prefix": "Key_" },
+  "pads": [
+    // the DualSense and the DualShock 4, by name or USB id
+    { "devices": ["DualShock4", "DualSense", "054C05C4", "054C09CC", "054C0CE6", "054C0DF2"],
+      "buttons": { "Joy_1": "square", "Joy_2": "cross", "Joy_3": "circle", "Joy_4": "triangle",
+                   "Joy_5": "l1", "Joy_6": "r1", "Joy_7": "l2", "Joy_8": "r2",
+                   "Joy_9": "create", "Joy_10": "options", "Joy_11": "l3", "Joy_12": "r3",
+                   "Joy_13": "ps", "Joy_14": "touchpad",
+                   "Joy_POV1Up": "up", "Joy_POV1Down": "down", "Joy_POV1Left": "left", "Joy_POV1Right": "right" },
+      "sticks": { "Joy_XAxis": "lx", "Joy_YAxis": "ly", "Joy_ZAxis": "rx", "Joy_RZAxis": "ry" } },
+    // a pad seen as an Xbox controller: only its sticks are read
+    { "devices": ["GamePad"],
+      "sticks": { "GamePad_LStickX": "lx", "Joy_XAxis": "lx", "GamePad_LStickY": "ly", "Joy_YAxis": "ly",
+                  "GamePad_RStickX": "rx", "Joy_RXAxis": "rx", "GamePad_RStickY": "ry", "Joy_RYAxis": "ry" } }
+  ]
+}

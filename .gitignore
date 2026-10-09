@@ -1,0 +1,20 @@
+# packed mods
+*.brr
+*.zip
+
+# editor support that mod schema and mod types write
+types/
+.luarc.json
+.bururu/
+.vscode/
+
+# left behind by file managers
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# REAPER writes these next to the project
+*.rpp-bak
+*.RPP-bak
+*.reapeaks
+Backups/

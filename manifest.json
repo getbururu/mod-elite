@@ -1,0 +1,59 @@
+// The Elite Dangerous mod.
+{
+  "manifest": 1,
+  "id": "elite",
+  "name": "Elite Dangerous",
+  "version": "0.1.0",
+  "api": "0.10",
+  "kind": "game",
+  "authors": ["Bururu"],
+  "license": "MIT",
+  "summary": "Haptics, adaptive triggers and lights for Elite Dangerous.",
+  "homepage": "https://github.com/getbururu/mod-elite",
+  "icon": "ship",
+
+  "games": {
+    "elite-dangerous": {
+      "name": "Elite Dangerous",
+      "short_name": "Elite",
+      "steam_app": 359320,
+      "process": {
+        "windows": { "game": ["EliteDangerous64.exe"], "launcher": ["EDLaunch.exe"] },
+        "linux":   { "game": ["EliteDangerous64.exe"], "launcher": ["EDLaunch.exe"], "match": "cmdline" }
+      },
+      "window": {
+        "windows": { "class": "FrontierDevelopmentsAppWinClass" },
+        "linux":   { "wm_class": "steam_app_359320" }
+      },
+      "virtual_pad": "launcher_or_game",
+      "native_dualsense": false,
+      "anti_cheat": { "kind": "none" }
+    }
+  },
+
+  "paths": {
+    "journal":  { "path": "{SavedGames}/Frontier Developments/Elite Dangerous",
+                  "proton": 359320, "setting": "journal_dir", "label": "Journal" },
+    "options":  { "path": "{LocalAppData}/Frontier Developments/Elite Dangerous/Options",
+                  "proton": 359320, "label": "Options" },
+    "bindings": { "path": "{path:options}/Bindings", "setting": "bindings_dir", "label": "Bindings" }
+  },
+
+  "dependencies": {},
+  "load_after": [], "load_before": [],
+
+  "entry": "lua/main.lua",
+  "demo": "demo/demo.replay.jsonl",
+  "feels":  { "rumble_default": "none" },
+  "rule_env": { "st": "sensors.status", "hud": "sensors.hud", "lib": "lua/lib.lua" },
+  "outputs": ["haptics", "rumble", "triggers", "lightbar", "player_leds", "mic", "gyro_hold"],
+  "permissions": { "files": ["journal", "options", "bindings"], "screen": true, "keyboard": true, "udp": [] },
+  "hooks": {
+    "weapon_layer@1": { "doc": "Before each weapon layer (a weapon's texture, the multi-cannon spin-up, the railgun charge), with trigger (r2 or l2), class, key, feel, level, side and skip: change feel, level, side, or skip it." },
+    "turn@1":         { "doc": "Before the turn feel: change level, mode, kick." },
+    "heat@1":         { "doc": "Before the heat feel: change level or p." },
+    "boost@1":        { "doc": "Before a boost or dud plays, with feel (boost or boost_empty), source (circle or binds), eng (the engine capacitor, absent without a fresh HUD read), need and skip: change the feel or skip it." },
+    "state@1":        { "doc": "After each journal or status state update (read only)." }
+  },
+  "os": ["windows", "linux"]
+}

@@ -1,0 +1,36 @@
+// Ship systems switching, from one Status.json to the next.
+// Only in a ship;
+// from fire_group on, the previous status was in a ship too.
+{
+  "format": 1,
+  "defaults": { "if": "lib.in_ship(new)" },
+  "rules": {
+    "hardpoints":     { "order": 10, "on": "status:change", "if": "changed('HardpointsDeployed') and not new.flags.Supercruise",
+                        "play": "hardpoints" },
+    "landing_gear":   { "order": 20, "on": "status:change", "if": "changed('LandingGearDown')", "play": "landing_gear" },
+    "cargo_scoop":    { "order": 30, "on": "status:change", "if": "changed('CargoScoopDeployed')", "play": "cargo_scoop" },
+    "silent_running": { "order": 40, "on": "status:change", "if": "changed('SilentRunning')", "play": "silent_running" },
+    // the power distributor moved (a Status.json may lack Pips)
+    "pips":           { "order": 50, "on": "status:change",
+                        "if": "kit.has(new.Pips) and kit.has(old.Pips) and #new.Pips == 3 and #old.Pips == 3 and not kit.same(new.Pips, old.Pips)",
+                        "play": "pips" },
+
+    "fire_group":     { "order": 60, "on": "status:change", "if": "lib.in_ship(old) and new.FireGroup ~= old.FireGroup", "play": "fire_group" },
+    "fa_off":         { "order": 70, "on": "status:change", "if": "lib.in_ship(old) and changed('FlightAssistOff') and new.flags.FlightAssistOff",
+                        "play": "fa_off" },
+    "fa_on":          { "order": 71, "on": "status:change", "if": "lib.in_ship(old) and changed('FlightAssistOff') and not new.flags.FlightAssistOff",
+                        "play": "fa_on" },
+    "fsd_ready":      { "order": 80, "on": "status:change", "if": "lib.in_ship(old) and fell('FSDCooldown') and not new.flags.Docked",
+                        "play": "fsd_ready" },
+    // mass lock, but not as a side effect of leaving supercruise or a
+    // station, which have their own feel
+    "mass_lock":      { "order": 90, "on": "status:change",
+                        "if": "lib.in_ship(old) and lib.free_space(new) and lib.free_space(old) and rose('MassLocked')",
+                        "play": "mass_lock" },
+    "mass_unlock":    { "order": 91, "on": "status:change",
+                        "if": "lib.in_ship(old) and lib.free_space(new) and lib.free_space(old) and fell('MassLocked')",
+                        "play": "mass_unlock" },
+    "glide_start":    { "order": 100, "on": "status:change", "if": "lib.in_ship(old) and rose('GlideMode')", "play": "glide_start" },
+    "glide_end":      { "order": 101, "on": "status:change", "if": "lib.in_ship(old) and fell('GlideMode')", "play": "glide_end" }
+  }
+}

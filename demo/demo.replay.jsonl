@@ -1,0 +1,279 @@
+{"replay":1,"mod":"elite","mod_version":"1.0.0","bururu":"0.9.0","start_unix_ms":1767268800000,"poll_ms":25}
+{"t_ms":0,"sensor":"hud","state":{}}
+{"t_ms":0,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":0,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":1000,"step":"Normal space, hull 100% (green)","reset":true}
+{"t_ms":1000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":4000,"step":"Hardpoints deployed: clack, R2/L2 weapon click","reset":true}
+{"t_ms":4000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":4025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":8000,"step":"FIRE: R2 = large multi-cannons (right: a rising whir while they spin up, then the rattle), L2 = beam lasers (left); hold them","reset":true}
+{"t_ms":8000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint1\"},{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint2\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint2\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":8000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":8250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"pressed":["l2","r2"],"r2":220}}
+{"t_ms":8275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"r2":220}}
+{"t_ms":15000,"step":"FIRE: R2 = rail guns (hold to charge, release), L2 = missiles (press)","reset":true}
+{"t_ms":15000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":15000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"AmmoInClip\":1,\"AmmoInHopper\":80,\"Health\":1,\"Item\":\"hpt_railgun_fixed_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint1\"},{\"AmmoInClip\":1,\"AmmoInHopper\":80,\"Health\":1,\"Item\":\"hpt_railgun_fixed_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint2\"},{\"AmmoInClip\":8,\"AmmoInHopper\":16,\"Health\":1,\"Item\":\"hpt_dumbfiremissilerack_fixed_small\",\"On\":true,\"Priority\":0,\"Slot\":\"SmallHardpoint1\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":15000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":15250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"pressed":["r2"],"r2":220}}
+{"t_ms":15275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"r2":220}}
+{"t_ms":16750,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":17250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"pressed":["r2"],"r2":220}}
+{"t_ms":17275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"r2":220}}
+{"t_ms":18750,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":19250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220,"pressed":["l2"]}}
+{"t_ms":19275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220}}
+{"t_ms":19750,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":20500,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220,"pressed":["l2"]}}
+{"t_ms":20525,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220}}
+{"t_ms":21000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":22000,"step":"FIRE: R2 = pulse lasers, L2 = plasma accelerator; hold them","reset":true}
+{"t_ms":22000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"Health\":1,\"Item\":\"hpt_pulselaser_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint1\"},{\"Health\":1,\"Item\":\"hpt_pulselaser_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint2\"},{\"AmmoInClip\":5,\"AmmoInHopper\":100,\"Health\":1,\"Item\":\"hpt_plasmaaccelerator_fixed_huge\",\"On\":true,\"Priority\":0,\"Slot\":\"HugeHardpoint1\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":22000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":22250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"pressed":["l2","r2"],"r2":220}}
+{"t_ms":22275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"r2":220}}
+{"t_ms":29000,"step":"TURNING: turn the controller or push the left stick: felt as turn_feel says, outside the throttle's blue zone...","reset":true}
+{"t_ms":29000,"sensor":"hud","state":{"blue_zone":{"ok":true,"value":false}}}
+{"t_ms":29000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":29000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":29250,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,492,0]}}
+{"t_ms":31750,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,0,0]}}
+{"t_ms":32750,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,0,0],"sticks":[0.8,0,0,0]}}
+{"t_ms":34750,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,0,0]}}
+{"t_ms":36000,"step":"... and nothing inside it, where the ship turns best. A flick adds a soft push; a finger on the touchpad stops the gyro part","reset":true}
+{"t_ms":36000,"sensor":"hud","state":{"blue_zone":{"ok":true,"value":true}}}
+{"t_ms":36000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":36000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":36250,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,492,0]}}
+{"t_ms":38500,"sensor":"hud","state":{"blue_zone":{"ok":true,"value":false}}}
+{"t_ms":38500,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,0,0]}}
+{"t_ms":39000,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,6554,0]}}
+{"t_ms":39025,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,0,0]}}
+{"t_ms":40000,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,492,0],"touch":true}}
+{"t_ms":41500,"sensor":"pad","state":{"accel_raw":[0,8192,0],"gyro_raw":[0,492,0]}}
+{"t_ms":43000,"step":"THRUST: hold R1 (light rumble), press Circle to BOOST","reset":true}
+{"t_ms":43000,"sensor":"hud","state":{}}
+{"t_ms":43000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":43000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":43250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r1"],"pressed":["r1"]}}
+{"t_ms":43275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r1"]}}
+{"t_ms":46250,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":46500,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["east"],"pressed":["east"]}}
+{"t_ms":46525,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["east"]}}
+{"t_ms":46600,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":49000,"step":"Fire group 3 (player LEDs) and a tick","reset":true}
+{"t_ms":49000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":49025,"sensor":"status","raw":"{\"FireGroup\":2,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":49625,"sensor":"status","raw":"{\"FireGroup\":2,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[2,4,6],\"event\":\"Status\"}"}
+{"t_ms":52000,"step":"Hull 50% (amber)","reset":true}
+{"t_ms":52000,"sensor":"journal","raw":"{\"HullHealth\":0.5,\"Modules\":[],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":52000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":55000,"step":"Hull 15% (red)","reset":true}
+{"t_ms":55000,"sensor":"journal","raw":"{\"HullHealth\":0.15,\"Modules\":[],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":55000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":58000,"step":"Taking hits: thumps and red flashes","reset":true}
+{"t_ms":58000,"sensor":"journal","raw":"{\"HullHealth\":0.8,\"Modules\":[],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":58000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":58250,"sensor":"journal","raw":"{\"event\":\"UnderAttack\",\"Target\":\"You\"}"}
+{"t_ms":58250,"sensor":"journal","raw":"{\"event\":\"HullDamage\",\"Health\":0.78,\"PlayerPilot\":true,\"Fighter\":false}"}
+{"t_ms":59450,"sensor":"journal","raw":"{\"event\":\"HullDamage\",\"Health\":0.76,\"PlayerPilot\":true,\"Fighter\":false}"}
+{"t_ms":60650,"sensor":"journal","raw":"{\"event\":\"HullDamage\",\"Health\":0.74,\"PlayerPilot\":true,\"Fighter\":false}"}
+{"t_ms":62000,"step":"Scanned by another ship: a scan line sweeps from left to right","reset":true}
+{"t_ms":62000,"sensor":"journal","raw":"{\"event\":\"Scanned\",\"ScanType\":\"Cargo\"}"}
+{"t_ms":62000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":64000,"step":"Kill confirmed: double tap, green flash","reset":true}
+{"t_ms":64000,"sensor":"journal","raw":"{\"event\":\"Bounty\",\"Rewards\":[{\"Faction\":\"Test\",\"Reward\":1000}],\"Target\":\"viper\",\"TotalReward\":1000,\"VictimFaction\":\"Test\"}"}
+{"t_ms":64000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":66000,"step":"Combat music: the lightbar breathes","reset":true}
+{"t_ms":66000,"sensor":"journal","raw":"{\"event\":\"Music\",\"MusicTrack\":\"Combat_Dogfight\"}"}
+{"t_ms":66000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":69000,"step":"Shields down: a heavy hit, red blinking, the hull rattling","reset":true}
+{"t_ms":69000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":69025,"sensor":"journal","raw":"{\"event\":\"ShieldState\",\"ShieldsUp\":false}"}
+{"t_ms":69025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":20971584,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":74000,"step":"HEAT (estimate): hold R2 and L2 (beam lasers), the throb speeds up as heat builds","reset":true}
+{"t_ms":74000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint3\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint2\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":74000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":74250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"pressed":["l2","r2"],"r2":220}}
+{"t_ms":74275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"r2":220}}
+{"t_ms":82000,"step":"Overheating (over 100%): orange blinking, boiling","reset":true}
+{"t_ms":82000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":82000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":17825864,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":86000,"step":"Scanners out (analysis mode): light feedback","reset":true}
+{"t_ms":86000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":150995016,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":89000,"step":"FSD charging: the lightbar rises (jump_feel \"calm\" adds a soft pulse every second)","reset":true}
+{"t_ms":89000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":89025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16908296,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":94000,"step":"Hyperspace jump: a soft swell into the tunnel, then quiet; the LEDs count down","reset":true}
+{"t_ms":94000,"sensor":"journal","raw":"{\"event\":\"StartJump\",\"JumpType\":\"Hyperspace\",\"StarSystem\":\"Test 2\",\"SystemAddress\":2,\"StarClass\":\"K\"}"}
+{"t_ms":94000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":1090519048,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":102000,"step":"Supercruise entry (blue)","reset":true}
+{"t_ms":102000,"sensor":"journal","raw":"{\"event\":\"SupercruiseEntry\",\"StarSystem\":\"Test\",\"SystemAddress\":1}"}
+{"t_ms":102000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777240,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":105000,"step":"Being interdicted: magenta, a strong rumble","reset":true}
+{"t_ms":105000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":25165848,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":109000,"step":"Supercruise drop","reset":true}
+{"t_ms":109000,"sensor":"journal","raw":"{\"event\":\"SupercruiseExit\",\"StarSystem\":\"Test\",\"SystemAddress\":1,\"Body\":\"Test 1\",\"BodyType\":\"Planet\"}"}
+{"t_ms":109000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":111000,"step":"Fuel scooping: amber breathing, a light rumble","reset":true}
+{"t_ms":111000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16779288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":114000,"step":"Landing gear, low fuel (the mic LED pulses)","reset":true}
+{"t_ms":114000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":114025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":17301516,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":117000,"step":"Silent running: the lightbar off, the mic LED on","reset":true}
+{"t_ms":117000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":117025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16778248,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":120000,"step":"Docked: the clamps thump, the lights dim","reset":true}
+{"t_ms":120000,"sensor":"journal","raw":"{\"event\":\"Docked\",\"StationName\":\"Test Station\",\"StationType\":\"Coriolis\"}"}
+{"t_ms":120000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777229,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":122000,"step":"FLIGHT ASSIST off, then on","reset":true}
+{"t_ms":122000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":122025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777256,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":123525,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":125000,"step":"FSD cooldown over (right), mass lock in, mass lock out","reset":true}
+{"t_ms":125000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":17039368,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":125025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":126325,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16842760,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":127625,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":129000,"step":"ATMOSPHERE: gliding in","reset":true}
+{"t_ms":129000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":129025,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":4096,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":134000,"step":"GROUND RUSH: dropping fast near the surface","reset":true}
+{"t_ms":134000,"sensor":"status","raw":"{\"Altitude\":500,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":134250,"sensor":"status","raw":"{\"Altitude\":472.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":134500,"sensor":"status","raw":"{\"Altitude\":445,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":134750,"sensor":"status","raw":"{\"Altitude\":417.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":135000,"sensor":"status","raw":"{\"Altitude\":390,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":135250,"sensor":"status","raw":"{\"Altitude\":362.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":135500,"sensor":"status","raw":"{\"Altitude\":335,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":135750,"sensor":"status","raw":"{\"Altitude\":307.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":136000,"sensor":"status","raw":"{\"Altitude\":280,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":136250,"sensor":"status","raw":"{\"Altitude\":252.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":136500,"sensor":"status","raw":"{\"Altitude\":225,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":136750,"sensor":"status","raw":"{\"Altitude\":197.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":137000,"sensor":"status","raw":"{\"Altitude\":170,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":137250,"sensor":"status","raw":"{\"Altitude\":142.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":137500,"sensor":"status","raw":"{\"Altitude\":115,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":137750,"sensor":"status","raw":"{\"Altitude\":87.5,\"FireGroup\":0,\"Flags\":18874376,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":138000,"step":"HEAT SINK, CHAFF, SHIELD CELL (from your Elite bindings in the game)","reset":true}
+{"t_ms":138000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":138250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["down"],"pressed":["down"]}}
+{"t_ms":138275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["down"]}}
+{"t_ms":138350,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["north","down"],"pressed":["north"]}}
+{"t_ms":138375,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["north","down"]}}
+{"t_ms":138450,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":139750,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["right"],"pressed":["right"]}}
+{"t_ms":139775,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["right"]}}
+{"t_ms":139850,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":141250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["down"],"pressed":["down"]}}
+{"t_ms":141275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["down"]}}
+{"t_ms":141350,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":144000,"step":"CARGO: a canister scooped, a canister ejected","reset":true}
+{"t_ms":144000,"sensor":"journal","raw":"{\"event\":\"CollectCargo\",\"Type\":\"gold\",\"Stolen\":false}"}
+{"t_ms":144000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":145500,"sensor":"journal","raw":"{\"event\":\"EjectCargo\",\"Type\":\"gold\",\"Count\":1,\"Abandoned\":true}"}
+{"t_ms":147000,"step":"MESSAGE from a player or your wing","reset":true}
+{"t_ms":147000,"sensor":"journal","raw":"{\"event\":\"ReceiveText\",\"From\":\"Wing Test\",\"Message\":\"redacted\",\"Channel\":\"wing\"}"}
+{"t_ms":147000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":149000,"step":"THARGOID: a slow throb, the shutdown field (lights out), the reboot","reset":true}
+{"t_ms":149000,"sensor":"journal","raw":"{\"event\":\"Music\",\"MusicTrack\":\"Unknown_Encounter\"}"}
+{"t_ms":149000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":151000,"sensor":"journal","raw":"{\"event\":\"SystemsShutdown\"}"}
+{"t_ms":182000,"step":"SHIELD HITS (read from the HUD): 3% left, 4% right, a heavy 13%, sustained fire as small hits, the low-shield crackle","reset":true}
+{"t_ms":182000,"sensor":"hud","state":{"shield":{"ok":true,"value":100}}}
+{"t_ms":182000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":182250,"sensor":"hud","state":{"shield":{"ok":true,"value":97}},"events":[{"damage":3,"kind":"shield_hit","pan":-1,"side":"both","strength":0.5}]}
+{"t_ms":183150,"sensor":"hud","state":{"shield":{"ok":true,"value":93}},"events":[{"damage":4,"kind":"shield_hit","pan":1,"side":"both","strength":0.58}]}
+{"t_ms":184050,"sensor":"hud","state":{"shield":{"ok":true,"value":80}},"events":[{"damage":13,"kind":"shield_hit","side":"both","strength":1}]}
+{"t_ms":185150,"sensor":"hud","state":{"shield":{"ok":true,"value":79}},"events":[{"damage":1,"kind":"shield_hit","pan":-0.8,"side":"both","strength":0.33}]}
+{"t_ms":185275,"sensor":"hud","state":{"shield":{"ok":true,"value":78}},"events":[{"damage":1,"kind":"shield_hit","pan":0.8,"side":"both","strength":0.33}]}
+{"t_ms":185400,"sensor":"hud","state":{"shield":{"ok":true,"value":77}},"events":[{"damage":1,"kind":"shield_hit","pan":-0.8,"side":"both","strength":0.33}]}
+{"t_ms":185525,"sensor":"hud","state":{"shield":{"ok":true,"value":76}},"events":[{"damage":1,"kind":"shield_hit","pan":-0.8,"side":"both","strength":0.33}]}
+{"t_ms":185650,"sensor":"hud","state":{"shield":{"ok":true,"value":75}},"events":[{"damage":1,"kind":"shield_hit","pan":0.8,"side":"both","strength":0.33}]}
+{"t_ms":185775,"sensor":"hud","state":{"shield":{"ok":true,"value":74}},"events":[{"damage":1,"kind":"shield_hit","pan":-0.8,"side":"both","strength":0.33}]}
+{"t_ms":185900,"sensor":"hud","state":{"shield":{"ok":true,"value":73}},"events":[{"damage":1,"kind":"shield_hit","pan":-0.8,"side":"both","strength":0.33}]}
+{"t_ms":186025,"sensor":"hud","state":{"shield":{"ok":true,"value":72}},"events":[{"damage":1,"kind":"shield_hit","pan":0.8,"side":"both","strength":0.33}]}
+{"t_ms":186650,"sensor":"hud","state":{"shield":{"ok":true,"value":73}},"events":[{"kind":"shield_regen","side":"both"}]}
+{"t_ms":187150,"sensor":"hud","state":{"shield":{"ok":true,"value":74}},"events":[{"kind":"shield_regen","side":"both"}]}
+{"t_ms":187250,"sensor":"hud","state":{"shield":{"ok":true,"value":18}}}
+{"t_ms":189000,"step":"HEAT (read from the HUD): passing 60, 70, 80%","reset":true}
+{"t_ms":189000,"sensor":"hud","state":{}}
+{"t_ms":189000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":189250,"sensor":"hud","state":{"heat":{"ok":true,"value":61}},"events":[{"kind":"heat_notch","side":"both","strength":0.4}]}
+{"t_ms":190050,"sensor":"hud","state":{"heat":{"ok":true,"value":71}},"events":[{"kind":"heat_notch","side":"both","strength":0.6000000000000001}]}
+{"t_ms":190850,"sensor":"hud","state":{"heat":{"ok":true,"value":82}},"events":[{"kind":"heat_notch","side":"both","strength":0.8}]}
+{"t_ms":193000,"step":"HULL HITS (read from the HUD): metallic blows, then the hull creaking at 15%","reset":true}
+{"t_ms":193000,"sensor":"hud","state":{}}
+{"t_ms":193000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":193250,"sensor":"hud","state":{"hull":{"ok":true,"value":70}},"events":[{"kind":"hull_hit","side":"both","strength":0.7}]}
+{"t_ms":194350,"sensor":"hud","state":{"hull":{"ok":true,"value":15}},"events":[{"kind":"hull_hit","side":"both","strength":1}]}
+{"t_ms":199000,"step":"YOUR SHOTS LANDING: ticks on the R2 side, then L2, then the target's shields breaking","reset":true}
+{"t_ms":199000,"sensor":"hud","state":{}}
+{"t_ms":199000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":199250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"pressed":["r2"],"r2":220}}
+{"t_ms":199275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"r2":220}}
+{"t_ms":199350,"sensor":"hud","events":[{"kind":"target_hit","side":"both","strength":0.7}]}
+{"t_ms":199650,"sensor":"hud","events":[{"kind":"target_hit","side":"both","strength":0.7}]}
+{"t_ms":199950,"sensor":"hud","events":[{"kind":"target_hit","side":"both","strength":0.7}]}
+{"t_ms":200100,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220,"pressed":["l2"]}}
+{"t_ms":200125,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220}}
+{"t_ms":200650,"sensor":"hud","events":[{"kind":"target_hit","side":"both","strength":0.7}]}
+{"t_ms":200950,"sensor":"hud","events":[{"kind":"target_hit","side":"both","strength":0.7}]}
+{"t_ms":201250,"sensor":"hud","events":[{"kind":"target_hit","side":"both","strength":0.7}]}
+{"t_ms":201850,"sensor":"hud","events":[{"kind":"target_shield_break","side":"both"}]}
+{"t_ms":204000,"step":"BOOST with an empty engine capacitor: a dud, then a real boost","reset":true}
+{"t_ms":204000,"sensor":"hud","state":{"capacitors":{"eng":0.1,"ok":true,"sys":1,"wep":1}}}
+{"t_ms":204000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":204000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":204250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["east"],"pressed":["east"]}}
+{"t_ms":204275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["east"]}}
+{"t_ms":204350,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":205500,"sensor":"hud","state":{"capacitors":{"eng":1,"ok":true,"sys":1,"wep":1}}}
+{"t_ms":205750,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["east"],"pressed":["east"]}}
+{"t_ms":205775,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["east"]}}
+{"t_ms":205850,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":208000,"step":"WEAPONS CAPACITOR EMPTY while firing: the triggers go slack (hold R2)","reset":true}
+{"t_ms":208000,"sensor":"hud","state":{"capacitors":{"eng":1,"ok":true,"sys":1,"wep":0}}}
+{"t_ms":208000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":208250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"pressed":["r2"],"r2":220}}
+{"t_ms":208275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"r2":220}}
+{"t_ms":212000,"step":"FIRE GROUP FROM THE HUD: R2 = 2 beam lasers, L2 = 3 multi-cannons, as the lists show; hold them","reset":true}
+{"t_ms":212000,"sensor":"hud","state":{"fire_lists":{"l2":{"classes":["multicannon"],"counts":[1],"key":1,"known":true,"names":["MULTICANNON"]},"r2":{"classes":["beam"],"counts":[1],"key":1,"known":true,"names":["BEAM"]}}}}
+{"t_ms":212000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":212000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint1\"},{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint2\"},{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint3\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint3\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint2\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":212000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":212250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"pressed":["l2","r2"],"r2":220}}
+{"t_ms":212275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"r2":220}}
+{"t_ms":218000,"step":"RELOAD (read from the HUD): hold L2; the clips drop out, the multi-cannons fall silent, L2 goes slack...","reset":true}
+{"t_ms":218000,"sensor":"hud","state":{"fire_lists":{"l2":{"busy":3,"classes":["multicannon"],"counted":3,"counts":[1],"key":1,"known":true,"names":["MULTICANNON"]},"r2":{"classes":["beam"],"counts":[1],"key":1,"known":true,"names":["BEAM"]}}},"events":[{"kind":"reload_start","side":"left"}]}
+{"t_ms":218000,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220,"pressed":["l2"]}}
+{"t_ms":218000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint1\"},{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint2\"},{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint3\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint3\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint2\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":218000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":218025,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220}}
+{"t_ms":221000,"step":"... and the new clips seat: firing again","reset":true}
+{"t_ms":221000,"sensor":"hud","state":{"fire_lists":{"l2":{"classes":["multicannon"],"counted":3,"counts":[1],"key":1,"known":true,"names":["MULTICANNON"]},"r2":{"classes":["beam"],"counts":[1],"key":1,"known":true,"names":["BEAM"]}}},"events":[{"kind":"reload_done","side":"left"}]}
+{"t_ms":221000,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220,"pressed":["l2"]}}
+{"t_ms":221000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint1\"},{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint2\"},{\"AmmoInClip\":90,\"AmmoInHopper\":2100,\"Health\":1,\"Item\":\"hpt_multicannon_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint3\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_large\",\"On\":true,\"Priority\":0,\"Slot\":\"LargeHardpoint3\"},{\"Health\":1,\"Item\":\"hpt_beamlaser_gimbal_medium\",\"On\":true,\"Priority\":0,\"Slot\":\"MediumHardpoint2\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":221000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777288,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":221025,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220}}
+{"t_ms":224000,"step":"UTILITIES ON THE TRIGGERS (hardpoints in): L2 = heat sink (press), R2 = kill warrant scanner (hold)","reset":true}
+{"t_ms":224000,"sensor":"hud","state":{"fire_lists":{"l2":{"classes":["heatsink"],"counts":[1],"known":true,"names":["HEATSINK"],"plain":true},"r2":{"classes":["scanner"],"counts":[1],"known":true,"names":["SCANNER"],"plain":true}}}}
+{"t_ms":224000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":224000,"sensor":"journal","raw":"{\"HullHealth\":1,\"Modules\":[{\"AmmoInClip\":1,\"AmmoInHopper\":2,\"Health\":1,\"Item\":\"hpt_heatsinklauncher_turret_tiny\",\"On\":true,\"Priority\":0,\"Slot\":\"TinyHardpoint1\"},{\"Health\":1,\"Item\":\"hpt_crimescanner_size0_class3\",\"On\":true,\"Priority\":0,\"Slot\":\"TinyHardpoint5\"}],\"Ship\":\"python\",\"ShipID\":1,\"event\":\"Loadout\"}"}
+{"t_ms":224000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":16777224,\"Flags2\":0,\"GuiFocus\":0,\"Pips\":[4,4,4],\"event\":\"Status\"}"}
+{"t_ms":224250,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220,"pressed":["l2"]}}
+{"t_ms":224275,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220}}
+{"t_ms":224350,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":225000,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220,"pressed":["l2"]}}
+{"t_ms":225025,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2"],"l2":220}}
+{"t_ms":225100,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":226500,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"pressed":["r2"],"r2":220}}
+{"t_ms":226525,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["r2"],"r2":220}}
+{"t_ms":229500,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":230000,"step":"On foot, health 60%: R2 weapon, L2 aim","reset":true}
+{"t_ms":230000,"sensor":"status","raw":"{\"FireGroup\":0,\"Flags\":0,\"Flags2\":17,\"GuiFocus\":0,\"Health\":0.6,\"Pips\":[4,4,4],\"SelectedWeapon\":\"$wpn_m_assaultrifle_kinetic_fauto_name;\",\"event\":\"Status\"}"}
+{"t_ms":231000,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"pressed":["l2","r2"],"r2":220}}
+{"t_ms":231025,"sensor":"pad","state":{"gyro_raw":[0,0,0],"held":["l2","r2"],"l2":220,"r2":220}}
+{"t_ms":233000,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":233975,"sensor":"game","running":true,"in_front":true}

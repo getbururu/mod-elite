@@ -1,0 +1,19 @@
+{
+  "feel": 1,
+  "name": "shield_hit",
+  "kind": "shot",
+  "meta": { "source": "reaper:feels.RPP#shield_hit", "editor": "rppconv 1" },
+  "voices": [
+    { "id": "v1", "type": "synth",
+      "wave": "Sine", "f0_hz": 11.5, "f1_hz": 62.8, "sweep": "linear", "sweep_ms": 135,
+      "delay_ms": 0, "attack_ms": 0, "attack_curve": 1, "hold_ms": 134,
+      "decay_ms": 0, "decay_curve": 1, "sustain": 0, "sustain_ms": 0,
+      "release_ms": 1, "release_curve": 1,
+      "level": 0.35, "left": 1, "right": 1,
+      "trem_hz": 0, "trem_depth": 0, "gate_hz": 0, "gate_duty": 0.5,
+      "band_hz": 80, "grain_rate": 70, "grain_cycles": 2, "grain_jitter": 30, "grain_spread": 20,
+      "seed": 1, "amount": { "ref": 3, "level_per": 0.05, "level_max": 0.9 } }
+  ],
+  "mix": { "duck": { "bus": "turn", "ms": 350 } },
+  "rumble": { "pattern": "once" }
+}

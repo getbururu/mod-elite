@@ -1,0 +1,89 @@
+name: Release
+
+# A pushed v* tag packs the mod as <id>-<version>.brr and publishes it with
+# SHA256SUMS in a release for the tag, with the version's CHANGELOG.md
+# section as the notes. The pack is built the way `bururu mod pack` builds
+# it (.github/pack): the same files give the same bytes. When the tag
+# already has a release (one made by hand), the job keeps it and only checks
+# that its .brr equals this build, so a tag never gets a second asset.
+# A version with a pre-release part (1.2.0-beta.1) makes a pre-release.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        # with pipefail: a failed pack fails its step
+        shell: bash
+    env:
+      TAG: ${{ github.ref_name }}
+      GOTOOLCHAIN: local
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          # the Go the packs are proven with: deflate's bytes may change between versions
+          go-version: '1.27.1'
+          cache: false
+      - name: pack
+        id: pack
+        run: |
+          mkdir -p "$RUNNER_TEMP/out"
+          go run .github/pack/main.go -out "$RUNNER_TEMP/out" . | tee -a "$GITHUB_OUTPUT"
+      - name: check the tag and the changelog
+        env:
+          VERSION: ${{ steps.pack.outputs.version }}
+        run: |
+          if [ "$TAG" != "v$VERSION" ]; then
+            echo "::error::the tag $TAG does not match the manifest's version $VERSION"
+            exit 1
+          fi
+          # the version's section of CHANGELOG.md, without its heading
+          awk -v v="$VERSION" '/^## / { if (on) exit; on = ($2 == v); next } on' CHANGELOG.md > "$RUNNER_TEMP/notes.md"
+          if ! grep -q '[^[:space:]]' "$RUNNER_TEMP/notes.md"; then
+            echo "::error::CHANGELOG.md has no section ## $VERSION"
+            exit 1
+          fi
+      - name: checksums
+        working-directory: ${{ runner.temp }}/out
+        env:
+          NAME: ${{ steps.pack.outputs.name }}
+        run: |
+          sha256sum "$NAME" > SHA256SUMS
+          cat SHA256SUMS
+      - name: publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NAME: ${{ steps.pack.outputs.name }}
+          VERSION: ${{ steps.pack.outputs.version }}
+          SHA256: ${{ steps.pack.outputs.sha256 }}
+        run: |
+          out="$RUNNER_TEMP/out"
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
+            gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "$NAME" --dir "$RUNNER_TEMP/have"
+            have=$(sha256sum "$RUNNER_TEMP/have/$NAME" | cut -d ' ' -f 1)
+            if [ "$have" != "$SHA256" ]; then
+              echo "::error::the release $TAG holds $NAME with SHA-256 $have; this build gives $SHA256"
+              exit 1
+            fi
+            echo "::notice::the release $TAG exists and its $NAME equals this build ($SHA256)"
+            exit 0
+          fi
+          printf '\nSHA-256 of %s: `%s`\n' "$NAME" "$SHA256" >> "$RUNNER_TEMP/notes.md"
+          pre=()
+          case "$VERSION" in *-*) pre=(--prerelease) ;; esac
+          gh release create "$TAG" "$out/$NAME" "$out/SHA256SUMS" --repo "$GITHUB_REPOSITORY" \
+            --verify-tag --title "Elite Dangerous $VERSION" --notes-file "$RUNNER_TEMP/notes.md" "${pre[@]}"

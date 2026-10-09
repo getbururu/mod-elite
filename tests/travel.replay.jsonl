@@ -1,0 +1,24 @@
+{"replay":1,"mod":"elite","mod_version":"1.0.0","bururu":"0.9.0","start_unix_ms":1767268800000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:00Z\",\"event\":\"Fileheader\",\"part\":1,\"language\":\"English/UK\",\"Odyssey\":true,\"gameversion\":\"4.0.0.1904\",\"build\":\"r300000/r0 \"}"}
+{"t_ms":0,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:00Z\",\"event\":\"LoadGame\",\"FID\":\"redacted\",\"Commander\":\"redacted\",\"Horizons\":true,\"Odyssey\":true,\"Ship\":\"cobramkiii\",\"ShipID\":1,\"ShipName\":\"redacted\",\"ShipIdent\":\"redacted\",\"FuelLevel\":16,\"FuelCapacity\":16,\"GameMode\":\"Solo\",\"Credits\":1000000,\"Loan\":0}"}
+{"t_ms":0,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:00Z\",\"event\":\"Status\",\"Flags\":16777224,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":500,"step":"FSD charging"}
+{"t_ms":500,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:01Z\",\"event\":\"Status\",\"Flags\":16908296,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":4500,"step":"Hyperspace jump: the countdown, the tunnel"}
+{"t_ms":4500,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:04Z\",\"event\":\"StartJump\",\"JumpType\":\"Hyperspace\",\"StarSystem\":\"Test 2\",\"SystemAddress\":2,\"StarClass\":\"K\"}"}
+{"t_ms":4500,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:04Z\",\"event\":\"Status\",\"Flags\":1090519048,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":12500,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:12Z\",\"event\":\"FSDJump\",\"StarSystem\":\"Test 2\",\"SystemAddress\":2,\"JumpDist\":8.5,\"FuelUsed\":1.2,\"FuelLevel\":14.8}"}
+{"t_ms":12500,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:12Z\",\"event\":\"Status\",\"Flags\":16777240,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":14000,"step":"Supercruise: fuel scooping"}
+{"t_ms":14000,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:14Z\",\"event\":\"Status\",\"Flags\":16779288,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":16000,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:16Z\",\"event\":\"Status\",\"Flags\":16777240,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":17000,"step":"Dropping out of supercruise"}
+{"t_ms":17000,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:17Z\",\"event\":\"SupercruiseExit\",\"StarSystem\":\"Test 2\",\"SystemAddress\":2,\"Body\":\"Test Station\",\"BodyType\":\"Station\"}"}
+{"t_ms":17000,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:17Z\",\"event\":\"Status\",\"Flags\":16842760,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":19000,"step":"Docking: granted, gear down, the clamps"}
+{"t_ms":19000,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:19Z\",\"event\":\"DockingGranted\",\"LandingPad\":12,\"StationName\":\"Test Station\",\"StationType\":\"Coriolis\"}"}
+{"t_ms":20000,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:20Z\",\"event\":\"Status\",\"Flags\":16842764,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":22000,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:22Z\",\"event\":\"Docked\",\"StationName\":\"Test Station\",\"StationType\":\"Coriolis\"}"}
+{"t_ms":22000,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:22Z\",\"event\":\"Status\",\"Flags\":16842765,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":24000,"sensor":"game","running":false,"in_front":false}

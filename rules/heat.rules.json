@@ -1,0 +1,12 @@
+// Elite's heat. The estimate and the heat feel
+// are Lua (lua/heat.lua): the estimate integrates every tick, and the heat
+// feel bends its voice with opts.add, which rules cannot do
+// yet. main.lua runs the "heat" stage right after the heat feel, so an
+// add-on's layers that follow the heat play at that point:
+//   "layers": { "my_heat_layer": { "stage": "heat", "feel": "...", "if": "state.heat > 0.8" } }
+{
+  "format": 1,
+  "stages": {
+    "heat": { "order": 20 }
+  }
+}

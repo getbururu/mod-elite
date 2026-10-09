@@ -1,0 +1,99 @@
+// The ship modules a fire group can hold, as lua/modules.lua reads them
+// from a Loadout event, for the fire sets and the HUD's fire group lists.
+// Items are matched in lower case by the
+// text they contain; the lowest "order" that matches wins, so special
+// versions come before the plain ones. An add-on patches an entry by its
+// key (data/modules.patch.json).
+{
+  // utility mounts and limpet controllers: the HUD's name and the class
+  "utility": {
+    "heatsinklauncher":               { "order": 10,  "name": "HEATSINK", "class": "heatsink" },
+    "causticsinklauncher":            { "order": 20,  "name": "CAUSTIC SINK", "class": "heatsink" },
+    "chafflauncher":                  { "order": 30,  "name": "CHAFF", "class": "chaff" },
+    "electroniccountermeasure":       { "order": 40,  "name": "ECM", "class": "ecm" },
+    "plasmapointdefence":             { "order": 50,  "name": "POINT DEFENCE", "class": "pointdefence" },
+    "crimescanner":                   { "order": 60,  "name": "KILL WARRANT SCANNER", "class": "scanner" },
+    "cargoscanner":                   { "order": 70,  "name": "MANIFEST SCANNER", "class": "scanner" },
+    "cloudscanner":                   { "order": 80,  "name": "FRAME SHIFT WAKE SCANNER", "class": "scanner" },
+    "xenoscanner":                    { "order": 90,  "name": "XENO SCANNER", "class": "scanner" },
+    "mrascanner":                     { "order": 100, "name": "PULSE WAVE ANALYSER", "class": "scanner" },
+    "antiunknownshutdown":            { "order": 110, "name": "SHUTDOWN FIELD NEUTRALISER", "class": "ecm" },
+    "shieldcellbank":                 { "order": 120, "name": "SHIELD CELL BANK", "class": "shieldcell" },
+    "dronecontrol_collection":        { "order": 130, "name": "COLLECTOR LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_prospector":        { "order": 140, "name": "PROSPECTOR LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_fueltransfer":      { "order": 150, "name": "FUEL TRANSFER LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_resourcesiphon":    { "order": 160, "name": "HATCH BREAKER LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_repair":            { "order": 170, "name": "REPAIR LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_recon":             { "order": 180, "name": "RECON LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_research":          { "order": 190, "name": "RESEARCH LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_unkvesselresearch": { "order": 200, "name": "RESEARCH LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_decontamination":   { "order": 210, "name": "DECONTAMINATION LIMPET CONTROLLER", "class": "limpet" },
+    "dronecontrol_rescue":            { "order": 220, "name": "RESCUE LIMPET CONTROLLER", "class": "limpet" },
+    "multidronecontrol":              { "order": 230, "name": "MULTI LIMPET CONTROLLER", "class": "limpet" }
+  },
+
+  // the HUD's names of weapons; an item that matches none shows its own
+  // name in upper case, without "hpt_"
+  "weapon_names": {
+    "beamlaser_fixed_small_heat":                { "order": 10,  "name": "RETRIBUTOR" },
+    "pulselaserburst_fixed_small_scatter":       { "order": 20,  "name": "CYTOSCRAMBLER" },
+    "pulselaser_fixed_medium_disruptor":         { "order": 30,  "name": "PULSE DISRUPTOR" },
+    "multicannon_fixed_small_strong":            { "order": 40,  "name": "ENFORCER" },
+    "multicannon_fixed_medium_advanced":         { "order": 50,  "name": "ADVANCED MULTI-CANNON" },
+    "railgun_fixed_medium_burst":                { "order": 60,  "name": "IMPERIAL HAMMER" },
+    "slugshot_fixed_large_range":                { "order": 70,  "name": "PACIFIER" },
+    "plasmaaccelerator_fixed_large_advanced":    { "order": 80,  "name": "ADVANCED PLASMA ACCELERATOR" },
+    "mininglaser_fixed_small_advanced":          { "order": 90,  "name": "MINING LANCE" },
+    "dumbfiremissilerack_fixed_medium_lasso":    { "order": 100, "name": "ROCKET PROPELLED FSD DISRUPTOR" },
+    "dumbfiremissilerack_fixed_medium_advanced": { "order": 110, "name": "ADVANCED MISSILE RACK" },
+    "causticmissile":                            { "order": 120, "name": "ENZYME MISSILE RACK" },
+    "drunkmissilerack":                          { "order": 130, "name": "PACK-HOUND MISSILE RACK" },
+    "atdumbfiremissile":                         { "order": 140, "name": "AX MISSILE RACK" },
+    "atmulticannon":                             { "order": 150, "name": "AX MULTI-CANNON" },
+    "atventdisruptorpylon":                      { "order": 160, "name": "TORPEDO PYLON" },
+    "advancedtorppylon":                         { "order": 170, "name": "TORPEDO PYLON" },
+    "basicmissilerack":                          { "order": 180, "name": "SEEKER MISSILE RACK" },
+    "dumbfiremissilerack":                       { "order": 190, "name": "MISSILE RACK" },
+    "minelauncher_fixed_small_impulse":          { "order": 200, "name": "SHOCK MINE LAUNCHER" },
+    "minelauncher":                              { "order": 210, "name": "MINE LAUNCHER" },
+    "flakmortar":                                { "order": 220, "name": "REMOTE RELEASE FLAK LAUNCHER" },
+    "flechettelauncher":                         { "order": 230, "name": "REMOTE RELEASE FLECHETTE LAUNCHER" },
+    "plasmashock":                               { "order": 240, "name": "SHOCK CANNON" },
+    "guardian_plasmalauncher":                   { "order": 250, "name": "GUARDIAN PLASMA CHARGER" },
+    "guardian_gausscannon":                      { "order": 260, "name": "GUARDIAN GAUSS CANNON" },
+    "guardian_shardcannon":                      { "order": 270, "name": "GUARDIAN SHARD CANNON" },
+    "mining_abrblstr":                           { "order": 280, "name": "ABRASION BLASTER" },
+    "mining_seismchrgwarhd":                     { "order": 290, "name": "SEISMIC CHARGE LAUNCHER" },
+    "mining_subsurfdispmisle":                   { "order": 300, "name": "SUB-SURFACE DISPLACEMENT MISSILE" },
+    "mininglaser":                               { "order": 310, "name": "MINING LASER" },
+    "beamlaser":                                 { "order": 320, "name": "BEAM LASER" },
+    "pulselaserburst":                           { "order": 330, "name": "BURST LASER" },
+    "pulselaser":                                { "order": 340, "name": "PULSE LASER" },
+    "multicannon":                               { "order": 350, "name": "MULTI-CANNON" },
+    "slugshot":                                  { "order": 360, "name": "FRAGMENT CANNON" },
+    "railgun":                                   { "order": 370, "name": "RAIL GUN" },
+    "plasmaaccelerator":                         { "order": 380, "name": "PLASMA ACCELERATOR" },
+    "cannon":                                    { "order": 390, "name": "CANNON" }
+  },
+
+  // the weapon class a weapon's feel is based on: the first rule with an
+  // item text in "any" names it; none: default_class
+  "weapon_classes": {
+    "beam":        { "order": 10,  "class": "beam", "any": ["beamlaser"] },
+    "burst":       { "order": 20,  "class": "burst", "any": ["pulselaserburst"] },
+    "pulse":       { "order": 30,  "class": "pulse", "any": ["pulselaser"] },
+    "mining":      { "order": 40,  "class": "mining", "any": ["mining", "subsurface"] },
+    "multicannon": { "order": 50,  "class": "multicannon", "any": ["multicannon"] },
+    "fragment":    { "order": 60,  "class": "fragment", "any": ["slugshot"] },
+    "railgun":     { "order": 70,  "class": "railgun", "any": ["railgun"] },
+    "plasma":      { "order": 80,  "class": "plasma", "any": ["plasmaaccelerator", "guardian_plasma"] },
+    "missile":     { "order": 90,  "class": "missile", "any": ["missile", "torpedo", "minelauncher", "dumbfire"] },
+    "cannon":      { "order": 100, "class": "cannon", "any": ["cannon", "flakmortar"] },
+    "guardian":    { "order": 110, "class": "plasma", "any": ["guardian"] }
+  },
+  "default_class": "generic",
+
+  // weapon sizes by the start of the slot's name (4 huge .. 1 small)
+  "slot_sizes": { "huge": 4, "large": 3, "medium": 2 },
+  "default_size": 1
+}

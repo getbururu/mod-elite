@@ -1,0 +1,19 @@
+// Status.json's GuiFocus: which panel or map has the controls. 0 is none;
+// the names are the journal manual's, for rules that test one
+// (st.GuiFocus == 6 is the galaxy map).
+{
+  "no_panel": 0,
+  "panels": {
+    "1": "internal panel (right)",
+    "2": "external panel (left)",
+    "3": "comms panel (top)",
+    "4": "role panel (bottom)",
+    "5": "station services",
+    "6": "galaxy map",
+    "7": "system map",
+    "8": "orrery",
+    "9": "FSS mode",
+    "10": "SAA mode",
+    "11": "codex"
+  }
+}

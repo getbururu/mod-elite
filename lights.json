@@ -1,0 +1,125 @@
+// What the controller shows: the lightbar, the
+// adaptive triggers, the player LEDs and the mic LED.
+//
+// Each table works field by field: the lightbar has a colour (color, rgb or
+// off, with the key the window shows) and a brightness (bright, a fraction
+// of the player's lightbar brightness; bright_abs, 0-255; blink_hz); the
+// triggers have l2 and r2 (both sets the two). Per field, the highest
+// priority row whose "if" holds and that sets the field wins, so a row can
+// change one field and leave the rest to the rows below. A "final" row
+// keeps the overlays (the moment flashes and buzzes) off its frames.
+//
+// Colours and trigger effects are keys of the colors and triggers settings.
+// The helpers (lib.*) are in lua/lib.lua, lua/state.lua and lua/lights.lua;
+// state.wep_slack is kept by lua/lights.lua before each frame.
+{
+  "format": 1,
+
+  // the lightbar: the hull colour, or what the situation calls for. The base
+  // rows (priority 0-15) are a first match, each setting both fields; the
+  // situations over them (20-80) apply neither on foot nor parked, later
+  // ones over earlier ones. A Thargoid shutdown field darkens everything,
+  // then the hull colour flickers back while the systems reboot.
+  "lightbar": {
+    "hull":         { "priority": 0, "rgb": "lib.hull_rgb(state.hull, settings.colors)",
+                      "key": { "expr": "lib.hull_key(state.hull)" }, "bright": 1 },
+    "supercruise":  { "priority": 10, "if": "st.flags.Supercruise", "color": "supercruise", "bright": 1 },
+    "hyperspace":   { "priority": 11, "if": "lib.hyperspace(t)", "color": "hyperspace",
+                      "bright": "kit.breathe(t.unix_ms, 1.5, 0.4)" },
+    "parked":       { "priority": 12, "if": "lib.parked(st)", "color": "docked", "bright": 0.35 },
+    "srv":          { "priority": 13, "if": "st.flags.InSRV", "color": "srv", "bright": 1 },
+    "on_foot":      { "priority": 14, "if": "lib.on_foot(st)", "rgb": "lib.hull_rgb(lib.health(st), settings.colors)",
+                      "key": { "expr": "lib.hull_key(lib.health(st))" }, "bright": 1 },
+    "low_oxygen":   { "priority": 15, "if": "lib.on_foot(st) and st.flags2.LowOxygen and kit.blink(t.unix_ms, 2)",
+                      "color": "low_oxygen", "bright": 1 },
+
+    "combat":       { "priority": 20, "if": "lib.situation_lights(st) and lib.in_combat()",
+                      "bright": "kit.breathe(t.unix_ms, 1, 0.35)" },
+    "fuel_scoop":   { "priority": 30, "if": "lib.situation_lights(st) and st.flags.ScoopingFuel", "color": "fuel_scoop",
+                      "bright": "kit.breathe(t.unix_ms, 1.2, 0.3)" },
+    "silent":       { "priority": 40, "if": "lib.situation_lights(st) and st.flags.SilentRunning", "bright": 0 },
+    "shields_down": { "priority": 50, "if": "lib.situation_lights(st) and lib.shields_down(t)", "color": "shields_down",
+                      "blink_hz": 2 },
+    "fsd_charge":   { "priority": 60, "if": "lib.situation_lights(st) and lib.fsd_charging(t)", "color": "fsd_charge",
+                      "bright": "0.2 + 0.8 * gomath.min(1, lib.secs(lib.since(t.now, state.fsd_charge_start)) / 5)" },
+    "overheat":     { "priority": 70, "if": "lib.situation_lights(st) and st.flags.Overheating", "color": "overheat",
+                      "blink_hz": 4 },
+    "interdiction": { "priority": 80, "if": "lib.situation_lights(st) and st.flags.BeingInterdicted",
+                      "color": "interdiction", "bright": "kit.breathe(t.unix_ms, 3, 0.2)" },
+
+    "shutdown":     { "priority": 1000, "if": "lib.shutdown(t) ~= 'none'", "off": true, "final": true },
+    "reboot":       { "priority": 1001,
+                      "if": "lib.rebooting(t) and (lib.reboot_progress(t) > 0.6 or kit.blink(t.unix_ms, 7))",
+                      "rgb": "lib.hull_rgb(state.hull, settings.colors)", "key": { "expr": "lib.hull_key(state.hull)" },
+                      "bright_abs": "t.core.lightbar_brightness * gomath.min(1, 0.3 + lib.reboot_progress(t))",
+                      "final": true }
+  },
+
+  // the triggers: in a panel, on foot, in the SRV, then the ship's own
+  // switch: interdicted, overheating, the capacitor empty, the weapons (a
+  // trigger whose weapons all reload goes slack), the scanners. Nothing
+  // matched: no effect.
+  "triggers": {
+    "shutdown":       { "priority": 1000, "if": "lib.shutdown(t) ~= 'none'", "both": "none" },
+    "panel":          { "priority": 100, "if": "lib.in_panel(st)", "both": "none" },
+    "on_foot_inside": { "priority": 91,
+                        "if": "lib.on_foot(st) and (st.flags2.OnFootSocialSpace or st.flags2.OnFootInStation or st.flags2.OnFootInHangar)",
+                        "both": "none" },
+    "on_foot":        { "priority": 90, "if": "lib.on_foot(st)", "l2": "onfoot_l", "r2": "onfoot_r" },
+    "srv_turret":     { "priority": 81, "if": "st.flags.InSRV and st.flags.SRVTurretView",
+                        "l2": "srv_turret_l", "r2": "srv_turret_r" },
+    "srv":            { "priority": 80, "if": "st.flags.InSRV", "both": "none" },
+    "interdiction":   { "priority": 70, "if": "lib.in_ship(st) and not lib.parked(st) and st.flags.BeingInterdicted",
+                        "both": "interdiction" },
+    "overheat":       { "priority": 60, "if": "lib.ship_weapons(st) and st.flags.Overheating",
+                        "l2": "ship_overheat_l", "r2": "ship_overheat_r" },
+    "wep_empty":      { "priority": 50, "if": "lib.ship_weapons(st) and state.wep_slack",
+                        "l2": "ship_wep_empty_l", "r2": "ship_wep_empty_r" },
+    "reload_l":       { "priority": 42, "if": "lib.ship_weapons(st) and lib.firing_share('l2', t) == 0", "l2": "ship_reload_l" },
+    "reload_r":       { "priority": 41, "if": "lib.ship_weapons(st) and lib.firing_share('r2', t) == 0", "r2": "ship_reload_r" },
+    "weapons":        { "priority": 40, "if": "lib.ship_weapons(st)", "l2": "ship_weapons_l", "r2": "ship_weapons_r" },
+    "scanner":        { "priority": 30, "if": "lib.in_ship(st) and not lib.parked(st) and st.flags.HardpointsDeployed",
+                        "l2": "ship_scanner_l", "r2": "ship_scanner_r" }
+  },
+
+  // the player LEDs: the hyperspace countdown, else the fire group in the
+  // ship (at least one LED lights); 0 is off.
+  "leds": {
+    "shutdown":   { "priority": 1000, "if": "lib.shutdown(t) ~= 'none'", "count": 0 },
+    "countdown":  { "priority": 10, "if": "lib.countdown(t)", "count": "gomath.ceil(lib.countdown_left(t) * 5)" },
+    "fire_group": { "priority": 5, "if": "lib.in_ship(st) and not lib.on_foot(st)", "count": "gomath.max(1, st.FireGroup + 1)" }
+  },
+
+  // the mic LED: pulsing on low fuel (not on foot), on while running
+  // silent, else off.
+  "mic": {
+    "shutdown": { "priority": 1000, "if": "lib.shutdown(t) ~= 'none'", "mic": "off" },
+    "low_fuel": { "priority": 10, "if": "st.flags.LowFuel and not lib.on_foot(st)", "mic": "pulse" },
+    "silent":   { "priority": 5, "if": "st.flags.SilentRunning", "mic": "on" }
+  },
+
+  // the moment flashes and buzzes and the died blink, started by the
+  // journal rules.
+  // Among the flashes still showing, the latest wins; the died blink is
+  // over any flash until a repair or a revive.
+  "overlays": {
+    "hull_damaged":    { "layer": "lightbar", "color": "hit",          "ms": 600,  "blink_hz": 8, "priority": 50 },
+    "shields_raised":  { "layer": "lightbar", "color": "shields_up",   "ms": 900,                 "priority": 50 },
+    "shields_lost":    { "layer": "lightbar", "color": "shields_down", "ms": 1500, "blink_hz": 6, "priority": 50 },
+    "attacked_flash":  { "layer": "lightbar", "color": "hit",          "ms": 250,                 "priority": 50 },
+    "kill":            { "layer": "lightbar", "color": "kill",         "ms": 700,                 "priority": 50 },
+    "heat_warning":    { "layer": "lightbar", "color": "overheat",     "ms": 600,  "blink_hz": 8, "priority": 50 },
+    "jet_cone":        { "layer": "lightbar", "color": "jet_cone",     "ms": 1200,                "priority": 50 },
+    "interdicted":     { "layer": "lightbar", "color": "interdiction", "ms": 1000, "blink_hz": 4, "priority": 50 },
+    "docking_granted": { "layer": "lightbar", "color": "docking_ok",   "ms": 1000,                "priority": 50 },
+    "docking_denied":  { "layer": "lightbar", "color": "docking_no",   "ms": 1000, "blink_hz": 4, "priority": 50 },
+    "died":            { "layer": "lightbar", "color": "died",         "ms": 5000, "blink_hz": 3, "priority": 100 },
+
+    // the buzzes: both triggers, out of the panels, the hangar and an
+    // interdiction
+    "attacked_buzz":   { "layer": "triggers", "trigger": "hit",      "ms": 250,  "priority": 50,
+                         "if": "not lib.in_panel(st) and not lib.parked(st) and not (st ~= nil and st.flags.BeingInterdicted == true)" },
+    "jet_cone_buzz":   { "layer": "triggers", "trigger": "jet_cone", "ms": 1000, "priority": 50,
+                         "if": "not lib.in_panel(st) and not lib.parked(st) and not (st ~= nil and st.flags.BeingInterdicted == true)" }
+  }
+}

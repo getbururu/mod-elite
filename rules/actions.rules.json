@@ -1,0 +1,13 @@
+// Bound actions the player just used: in a ship, out of the station and
+// the panels, with the systems alive. A heat sink's cooling and the bound
+// boost are Lua (weapons.lua, boost.lua); the mouse reset is the turn
+// feel's (turning.lua).
+{
+  "format": 1,
+  "defaults": { "if": "lib.in_ship(st) and not st.flags.Docked and not lib.in_panel(st) and not lib.systems_dead(t)" },
+  "rules": {
+    "heat_sink":   { "on": "binds:action=heat_sink",   "play": "heat_sink" },
+    "chaff":       { "on": "binds:action=chaff",       "play": "chaff" },
+    "shield_cell": { "on": "binds:action=shield_cell", "play": "shield_cell" }
+  }
+}

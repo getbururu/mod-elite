@@ -1,0 +1,28 @@
+{"replay":1,"mod":"elite","mod_version":"1.0.0","bururu":"0.9.0","start_unix_ms":1767268800000,"poll_ms":25}
+{"t_ms":0,"sensor":"game","running":true,"in_front":true}
+{"t_ms":0,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:00Z\",\"event\":\"Fileheader\",\"part\":1,\"language\":\"English/UK\",\"Odyssey\":true,\"gameversion\":\"4.0.0.1904\",\"build\":\"r300000/r0 \"}"}
+{"t_ms":0,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:00Z\",\"event\":\"LoadGame\",\"FID\":\"redacted\",\"Commander\":\"redacted\",\"Horizons\":true,\"Odyssey\":true,\"Ship\":\"python\",\"ShipID\":1,\"ShipName\":\"redacted\",\"ShipIdent\":\"redacted\",\"FuelLevel\":32,\"FuelCapacity\":32,\"GameMode\":\"Solo\",\"Credits\":1000000,\"Loan\":0}"}
+{"t_ms":0,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:00Z\",\"event\":\"Loadout\",\"Ship\":\"python\",\"ShipID\":1,\"HullHealth\":1,\"Modules\":[{\"Slot\":\"LargeHardpoint1\",\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Health\":1,\"AmmoInClip\":90,\"AmmoInHopper\":2100},{\"Slot\":\"LargeHardpoint2\",\"Item\":\"hpt_multicannon_gimbal_large\",\"On\":true,\"Priority\":0,\"Health\":1,\"AmmoInClip\":90,\"AmmoInHopper\":2100},{\"Slot\":\"MediumHardpoint1\",\"Item\":\"hpt_beamlaser_gimbal_medium\",\"On\":true,\"Priority\":0,\"Health\":1}]}"}
+{"t_ms":0,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:00Z\",\"event\":\"Status\",\"Flags\":16777224,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":0,"sensor":"hud","state":{"shield":{"value":100,"ok":true}}}
+{"t_ms":500,"step":"Hardpoints out"}
+{"t_ms":500,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:01Z\",\"event\":\"Status\",\"Flags\":16777288,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":1500,"step":"Firing: R2 and L2 held"}
+{"t_ms":1500,"sensor":"pad","state":{"held":["l2","r2"],"pressed":["l2","r2"],"l2":220,"r2":220,"gyro_raw":[0,0,0]}}
+{"t_ms":1525,"sensor":"pad","state":{"held":["l2","r2"],"l2":220,"r2":220,"gyro_raw":[0,0,0]}}
+{"t_ms":4500,"sensor":"pad","state":{"gyro_raw":[0,0,0]}}
+{"t_ms":5000,"step":"Under attack, combat music, shield hits read from the HUD"}
+{"t_ms":5000,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:05Z\",\"event\":\"Music\",\"MusicTrack\":\"Combat_Dogfight\"}"}
+{"t_ms":5000,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:05Z\",\"event\":\"UnderAttack\",\"Target\":\"You\"}"}
+{"t_ms":5000,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:05Z\",\"event\":\"Status\",\"Flags\":20971592,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":5200,"sensor":"hud","state":{"shield":{"value":96,"ok":true}},"events":[{"kind":"shield_hit","strength":0.5,"pan":-0.6,"side":"both","damage":4}]}
+{"t_ms":5900,"sensor":"hud","state":{"shield":{"value":91,"ok":true}},"events":[{"kind":"shield_hit","strength":0.6,"pan":0.5,"side":"both","damage":5}]}
+{"t_ms":6600,"sensor":"hud","state":{"shield":{"value":78,"ok":true}},"events":[{"kind":"shield_hit","strength":1,"side":"both","damage":13}]}
+{"t_ms":7500,"step":"Shields down, a hull hit"}
+{"t_ms":7500,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:07Z\",\"event\":\"ShieldState\",\"ShieldsUp\":false}"}
+{"t_ms":7500,"sensor":"status","raw":"{\"timestamp\":\"2026-01-01T12:00:07Z\",\"event\":\"Status\",\"Flags\":20971584,\"Flags2\":0,\"Pips\":[4,4,4],\"FireGroup\":0,\"GuiFocus\":0}"}
+{"t_ms":7500,"sensor":"hud","state":{"shield":{"value":0,"ok":true}}}
+{"t_ms":8000,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:08Z\",\"event\":\"HullDamage\",\"Health\":0.82,\"PlayerPilot\":true,\"Fighter\":false}"}
+{"t_ms":9500,"step":"Kill confirmed"}
+{"t_ms":9500,"sensor":"journal","raw":"{\"timestamp\":\"2026-01-01T12:00:09Z\",\"event\":\"Bounty\",\"Rewards\":[{\"Faction\":\"Test\",\"Reward\":1000}],\"Target\":\"viper\",\"TotalReward\":1000,\"VictimFaction\":\"Test\"}"}
+{"t_ms":11500,"sensor":"game","running":false,"in_front":false}
