@@ -17,7 +17,7 @@ This mod brings Elite Dangerous to your DualSense through Bururu, the app that d
 
 ## Install
 
-In Bururu, open **Mods**, then **Browse**, and click **Install** on Elite Dangerous. Or download `elite-<version>.brr` from [Releases](https://github.com/getbururu/brr-elite/releases) and use **Install from file...** on the **Mods** page.
+In Bururu, open **Mods**, then **Browse**, and click **Install** on Elite Dangerous. Or download `elite-<version>.brr` from [Releases](https://github.com/getbururu/bururu-elite/releases) and use **Install from file...** on the **Mods** page.
 
 ## Set up Elite
 
@@ -124,7 +124,7 @@ Bururu's modding guide, in the `docs\modding` folder next to `Bururu.exe`, expla
 
 ## Working on this mod
 
-- Clone it into Bururu's `mods` folder, in a folder named after the mod's id: `git clone https://github.com/getbururu/brr-elite mods\elite`. Bururu skips `.git` and `.github`, so the clone loads as it is.
+- Clone it into Bururu's `mods` folder, in a folder named after the mod's id: `git clone https://github.com/getbururu/bururu-elite mods\elite`. Bururu skips `.git` and `.github`, so the clone loads as it is.
 - `feels.RPP` is the REAPER project of the feels (see Bururu's REAPER kit, `mods\templates\reaper`). After a change there, `.\brr feel import feels.RPP --mod mods\elite` writes the feel files again. Packs leave the project out.
 - `tests/` holds recordings of play with what the mod does in them: `.\brr mod replay mods\elite mods\elite\tests\combat.replay.jsonl` plays one and compares.
 - A `v<version>` tag runs [the release workflow](.github/workflows/release.yml), which packs the mod and publishes `elite-<version>.brr` with `SHA256SUMS`. The tag must match `version` in `manifest.json`, and `CHANGELOG.md` needs a `## <version>` section.

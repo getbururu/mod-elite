@@ -9,7 +9,7 @@
   "authors": ["Bururu"],
   "license": "MIT",
   "summary": "Haptics, adaptive triggers and lights for Elite Dangerous.",
-  "homepage": "https://github.com/getbururu/brr-elite",
+  "homepage": "https://github.com/getbururu/bururu-elite",
   "icon": "ship",
 
   "games": {
