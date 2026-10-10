@@ -3,7 +3,7 @@
   "manifest": 1,
   "id": "elite",
   "name": "Elite Dangerous",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "api": "0.10",
   "kind": "game",
   "authors": ["Bururu"],

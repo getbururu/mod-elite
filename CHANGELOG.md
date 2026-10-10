@@ -2,6 +2,10 @@
 
 Each version has a section, newest first. A release shows its section as its notes.
 
+## 0.1.1
+
+The same feels and settings as 0.1.0. The licence file now matches the other Bururu mods.
+
 ## 0.1.0
 
 The first release.
